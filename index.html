@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SLib.io</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="#"><img src="./img/slib_logo_s.png">SLib.io</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/build/html/Index.html">Docs</a>
+                    </li>
+                    <li>
+                        <a href="#services">Tutorial</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Reference</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <img class="projectLogo" height="200px" src="./img/slib_logo.png" alt="Slib" title="Slib">
+                        <h3>Write Once, Run Anywhere<br>Smart Library for Cross-Platform<br>Innovative and Open-minded</h3>
+                        <hr class="intro-divider">
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="https://www.facebook.com/slib.io" target= "_blank" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/i/moments/839039332895744000" target= "_blank" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/groups/10331820" target= "_blank" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/SLIBIO/SLib" target= "_blank" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+    <!-- Page Content -->
+
+	<a  name="services"></a>
+    <div class="content-section-a">
+        <div class="mainContainer">
+        <div id="main_wrap" class="wrapper mainWrapper homeWrapper">
+          <p>SLib is the fastest way to develop the cross-platform development mobile apps, desktop apps and servers with C++</p>
+          <h3 id="concepts">ARC in C++</h3>
+          <ul>
+            <p>In C++ objects are allocated off the heap via new and freed via delete. The most innovative technology is the implementation of Automatic Reference Counting in C++.</p>
+            <div class="prism">class Node : public Referable
+{
+public:
+  List<span><</span>Ref<span><</span>Node<span>></span><span>></span> children;
+  WeakRef<span><</span>Node<span>></span> parent;
+
+  void addChild(Node* node)
+  {
+    node->parent = this;
+    children.add(node);
+  }
+};
+
+void build_tree()
+{
+  Ref<span><</span>Node<span>></span> root = new Node;
+  Ref<span><</span>Node<span>></span> node1 = new Node;
+  root->addChild(node1.get());
+  Ref<span><</span>Node<span>></span> node1_1 = new Node;
+  node1->addChild(node1_1.get());
+  Ref<span><</span>Node<span>></span> node1_2 = new Node;
+  node1->addChild(node1_2.get());
+  Ref<span><</span>Node<span>></span> node2 = new Node;
+  root->addChild(node2.get());
+}</div>
+          </ul>
+          <h3 id="concepts">Build Native Mobile Apps & Desktop Apps using SLib</h3>
+          <ul>
+            <p>SLib is the fastest way to develop the cross-platform development Win32, mac OS, iOS, Android, and Linux with C++.</p>
+            <div class="prism">//app.h
+#include <span><</span>slib.h<span>></span>
+
+class ExampleApp : public MobileApp
+{
+  SLIB_DECLARE_APPLICATION(ExampleApp)
+public:
+  ExampleApp();
+      
+  void onStart();
+  void onResume();
+  void onPause();
+};</div>
+<br>
+<div class="prism">//app.cpp
+#include "app.h"
+#include "MainPage.h"
+
+SLIB_DEFINE_APPLICATION(ExampleApp, MobileApp)
+
+void ExampleApp::onStart()
+{
+  setStartupPage(MainPage::getInstance());
+}</div>
+          </ul>
+          <h3 id="concepts">Build UIs Easily</h3>
+          <ul>
+            <p>You can build UIs easily with XML.</p>
+            <div class="prism">//styles.xml
+<span><</span>sapp version='1'>
+  <span><</span>layout-style
+    name='btn_normal'
+    background='@drawable/ui_button_back'
+    width='10%sw'
+    height='10%sw'
+    borderWidth='0'
+    instance='false'
+  /<span>></span>
+<span><</span>/sapp<span>></span>
+
+//HomePage.xml
+<span><</span>sapp version='1'<span>></span>
+  <span><</span>layout
+    type='page'
+    background='blue'
+    name='HomePage'
+  <span>></span>
+    <span><</span>group width='fill' height='wrap' backgroundColor="#e849004e" alignBottom="true"<span>></span>
+      <span><</span>linear name="footerButtons" orientation='horizontal' width='wrap' height='wrap' centerHorizontal='true'<span>></span>
+        <span><</span>button
+          name='btnFreePlay'
+          styles='btn_normal'
+          background='@drawable/ui_button_play'
+          marginTop="3%sw"
+          marginBottom="3%sw"
+          marginLeft="5.71%sw"
+          marginRight="5.71%sw"
+        /<span>></span>
+        ...
+      <span><</span>/linear<span>></span>
+    <span><</span>/group<span>></span>
+  <span><</span>/layout<span>></span>
+<span><</span>/sapp<span>></span></div></ul>
+          <h3 id="quickstart">Use Native Code When You Need To</h3>
+          <ul>
+            <p>It is easy to build part of your app using native code directly.</p>
+            <div class="prism">//NativeSample.h
+#include <span><</span>slib.h<span>></span>
+
+class NativeSample
+{
+public:
+  static int sum(int a, int b);
+};</div>
+<br>
+<div class="prism">//NativeSample.java
+package com.example;
+
+public class NativeSample {
+  public static int sum(int a, int b) {
+    return a + b;
+  }
+}</div>
+<br>
+<div class="prism">//NativeSample_Android.cpp
+#include "NativeSample.h"
+#include <span><</span>slib/core/java.h<span>></span>
+
+SLIB_JNI_BEGIN_CLASS(Android_NativeSample, "com/example/NativeSample")
+  SLIB_JNI_STATIC_METHOD(sum, "sum", "(II)I");
+SLIB_JNI_END_CLASS
+
+int NativeSample::sum(int a, int b)
+{
+  return ret = Android_NativeSample::sum.callInt(nullptr, a, b);
+}</div>
+<br>
+<div class="prism">//NativeSample_iOS.mm
+#include "NativeSample.h"
+int NativeSample::sum(int a, int b)
+{
+  return a + b;
+}</div>
+          </ul>
+
+        </div>
+        
+        <!-- /.container -->
+
+        <a href="#" class="btn btn-default btn-lg"><span class="network-name">Get Started With SLib.io</span></a>
+    </div>
+    <!-- /.content-section-a -->
+
+    <div class="banner">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <h3>Connect to SLib.io:</h3>
+                </div>
+                <div class="col-lg-7">
+                    <ul class="list-inline banner-social-buttons">
+                        <li>
+                            <a href="https://www.facebook.com/slib.io" target= "_blank" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/i/moments/839039332895744000" target= "_blank" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/groups/10331820" target= "_blank" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/SLIBIO/SLib" target= "_blank" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.banner -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#">Docs</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#about">Tutorial</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#services">Reference</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">Copyright &copy; SLib.io 2017. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
