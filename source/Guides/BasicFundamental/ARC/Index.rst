@@ -100,7 +100,7 @@ a single strong reference remains, and the Person instance is not deallocated:
 ARC does not deallocate the Person instance until the third and final strong reference is broken, 
 at which point it is clear that you are no longer using the Person instance:
 
-::
+.. code-block:: cpp
 
    reference3 = nullptr;
    // Prints "Alex is being deallocated"
@@ -109,7 +109,7 @@ Strong reference variable is automatically broken when it’s life ends.
 
 Example:
 
-::
+.. code-block:: cpp
 
    void test_strong_ref1()
    {
@@ -124,7 +124,7 @@ You can also use reference types as the return type of the functions.
 
 Example:
 
-::
+.. code-block:: cpp
 
    Ref<Person> createPerson(String name)
    {
@@ -166,7 +166,7 @@ it is useful to understand how such a cycle is caused.
 Here’s an example of how a strong reference cycle can be created by accident. This example defines 
 two classes called Person and Apartment, which model a block of apartments and its residents:
 
-::
+.. code-block:: cpp
 
    class Apartment: public Referable
    {
@@ -209,14 +209,14 @@ This enables you to see whether instances of Person and Apartment are being deal
 
 This next code snippet defines two variables called john and unit4A, which will be set to a specific Apartment and Person instance below.
 
-::
+.. code-block:: cpp
 
    Ref<Person> john;
    Ref<Apartment> unit4A;
 
 You can now create a specific Person instance and Apartment instance and assign these new instances to the john and unit4A variables:
 
-::
+.. code-block:: cpp
 
    john = new Person("John");
    unit4A = new Apartment("4A");
@@ -229,7 +229,7 @@ has a strong reference to the new Apartment instance:
 
 You can now link the two instances together so that the person has an apartment, and the apartment has a tenant.
 
-::
+.. code-block:: cpp
 
    john->apartment = unit4A;
    unit4A->tenant = john;
@@ -243,7 +243,7 @@ The Person instance now has a strong reference to the Apartment instance, and th
 to the Person instance. Therefore, when you break the strong references held by the john and unit4A variables, 
 the reference counts do not drop to zero, and the instances are not deallocated by ARC:
 
-::
+.. code-block:: cpp
 
     john = nullptr;
     unit4A = nullptr;
@@ -285,7 +285,7 @@ And, because weak references need to allow their value to be changed to nullptr 
 The example below is identical to the Person and Apartment example from above, with one important difference. 
 This time around, the Apartment type’s tenant is declared as a weak reference:
 
-::
+.. code-block:: cpp
 
    class Apartment: public Referable
    {
@@ -322,7 +322,7 @@ This time around, the Apartment type’s tenant is declared as a weak reference:
 
 The strong references from the two variables (john and unit4A) and the links between the two instances are created as before:
 
-::
+.. code-block:: cpp
 
    Ref<Person> john;
    Ref<Apartment> unit4A;
@@ -341,7 +341,7 @@ The Person instance still has a strong reference to the Apartment instance, but 
 to the Person instance. This means that when you break the strong reference held by the john variable by setting it to null, 
 there are no more strong references to the Person instance:
 
-::
+.. code-block:: cpp
 
    john = nullptr;
    // Prints "John is being deleted"
@@ -353,7 +353,7 @@ Because there are no more strong references to the Person instance, it is deallo
 The only remaining strong reference to the Apartment instance is from the unit4A variable. 
 If you break that strong reference, there are no more strong references to the Apartment instance:
 
-::
+.. code-block:: cpp
 
    unit4A = nullptr;
  // Prints "Apartment 4A is being deleted"
@@ -378,7 +378,7 @@ a pointer of Customer instance.
 Furthermore, a new CreditCard instance can only be created by passing a number value and a customer instance to a custom CreditCard constructor. 
 This ensures that a CreditCard instance always has a customer instance associated with it when the CreditCard instance is created.
 
-::
+.. code-block:: cpp
 
    class CreditCard: public Referable
    {
@@ -415,13 +415,13 @@ This ensures that a CreditCard instance always has a customer instance associate
 
 This next code snippet defines a Customer variable called john, which will be used to store a reference to a specific customer.
 
-::
+.. code-block:: cpp
 
    Ref<Customer> john;
 
 You can now create a Customer instance, and use it to initialize and assign a new CreditCard instance as that customer’s card variable:
 
-::
+.. code-block:: cpp
 
     john = new Customer("John", "1234_5678_9012_3456");
 
@@ -431,7 +431,7 @@ and the CreditCard instance has a pointer to the Customer instance.
 Because there are no more strong references to the Customer instance, 
 it is deallocated. After this happens, there are no more strong references to the CreditCard instance, and it too is deallocated:
 
-::
+.. code-block:: cpp
 
    john = nullptr;
    // Prints "John is being deleted"
