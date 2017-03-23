@@ -72,7 +72,7 @@ export default class NavContainer extends Component {
 
   renderNavigation() {
     const detector = new MobileDetect(window.navigator.userAgent);
-    if (this.state.windowWidth <= 500 || detector.mobile()) {
+    if (this.state.windowWidth <= 700 || detector.mobile()) {
       return [
         <div key={101} className={styles.mobileNav}>
           <p onClick={this.handleNavClick.bind(this)}><MobileNav /></p>

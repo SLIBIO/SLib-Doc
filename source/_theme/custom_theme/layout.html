@@ -87,9 +87,8 @@
         {%- include sidebartemplate %}
         {%- endfor %}
       {% else %}
-        {% include "logo-text.html" %}
-        {% include "globaltoc.html" %}
         {% include "searchbox.html" %}
+        {% include "globaltoc.html" %}
       {%- endif %}
     </div>
   </div>
@@ -102,8 +101,17 @@
   {%- else %}
     <div class="container-wrapper">
 
-      <div id="mobile-toggle">
-        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      <div id="header-toggle">
+        <div class="navigationBar">
+          <div class="navigationLogo">
+            <img role='presentation' src="{{ pathto('./_images/logo.png', 1) }}" class="imgLogo" />
+            <div class="logoName">Lib</div>
+          </div>
+          <ul>
+            <li key={200}><a href='../'>Go to SLib.io</a></li>
+          </ul>
+        </div>
+        <a id="menu" href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
       </div>
 
       {%- block sidebar1 %}{{ guzzle_sidebar() }}{% endblock %}
@@ -146,14 +154,19 @@
 
 {%- block footer %}
 <script type="text/javascript">
-  $("#mobile-toggle a").click(function () {
+  $("#header-toggle a").click(function () {
     $("#left-column").toggle();
+    if ($("#left-column")[0].style.display === 'none') {
+      $("#right-column")[0].style.paddingTop = '60px';
+    } else {
+      $("#right-column")[0].style.paddingTop = '20px';
+    }
   });
 </script>
 <script type="text/javascript" src="{{ pathto('_static/js/bootstrap.js', 1)}}"></script>
 {%- block footer_wrapper %}
   <div class="footer">
-    &copy; Copyright {{ copyright }}. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+    &copy; Copyright {{ copyright }}.
   </div>
 {%- endblock %}
 {%- block ga %}

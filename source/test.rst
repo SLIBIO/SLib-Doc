@@ -1,0 +1,1 @@
+.. figure:: /Images/logo.png
