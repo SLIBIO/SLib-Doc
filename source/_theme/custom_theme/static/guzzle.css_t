@@ -918,7 +918,7 @@ span.eqno {
   top: 0;
   left: 0;
   background-color: #0F1426;
-  opacity: .15;
+  opacity: .9;
   z-index: 1;
   display: flex;
   flex-direction: row;

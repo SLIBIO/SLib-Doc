@@ -6,7 +6,6 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
-    "guzzle_sphinx_theme",
     "edit_on_github"
 ]
 edit_on_github_project = 'SLIBIO/SLib-Doc'
@@ -28,7 +27,6 @@ release = ''
 exclude_patterns = []
 
 pygments_style = 'sphinx'
-# html_theme_path = guzzle_sphinx_theme.html_theme_path()
 html_theme_path = ["./_theme"]
 html_theme = 'custom_theme'
 # html_theme = 'sphinx_rtd_theme'
