@@ -14,6 +14,7 @@ body {
 }
 .edit_github {
   float: right;
+  margin-right: 35px;
 }
 .navigationBar {
   flex: 1;
@@ -917,12 +918,16 @@ span.eqno {
   top: 0;
   left: 0;
   background-color: #0F1426;
-  opacity: .95;
+  opacity: .15;
   z-index: 1;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  transition: all .5s ease;
+}
+#header-toggle:hover {
+  opacity: .9 !important;
 }
 #header-toggle #menu {
   display: none;

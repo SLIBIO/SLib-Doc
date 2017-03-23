@@ -99,21 +99,19 @@
   {%- if pagename == 'index' and theme_index_template %}
     {% include theme_index_template %}
   {%- else %}
-    <div class="container-wrapper">
-
-      <div id="header-toggle">
-        <div class="navigationBar">
-          <div class="navigationLogo">
-            <img role='presentation' src="{{ pathto('./_images/logo.png', 1) }}" class="imgLogo" />
-            <div class="logoName">Lib</div>
-          </div>
-          <ul>
-            <li key={200}><a href='../'>Go to SLib.io</a></li>
-          </ul>
-        </div>
-        <a id="menu" href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+  <div id="header-toggle">
+    <div class="navigationBar">
+      <div class="navigationLogo">
+        <img role='presentation' src="{{ pathto('./_images/logo.png', 1) }}" class="imgLogo" />
+        <div class="logoName">Lib</div>
       </div>
-
+      <ul>
+        <li key={200}><a href='../'>Go to SLib.io</a></li>
+      </ul>
+    </div>
+    <a id="menu" href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+  </div>
+    <div class="container-wrapper">
       {%- block sidebar1 %}{{ guzzle_sidebar() }}{% endblock %}
 
       {%- block document_wrapper %}
@@ -161,6 +159,13 @@
       $("#right-column")[0].style.paddingTop = '60px';
     } else {
       $("#right-column")[0].style.paddingTop = '20px';
+    }
+  });
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset < 60) {
+      $("#header-toggle")[0].style.opacity = 0.95;
+    } else {
+      $("#header-toggle")[0].style.opacity = 0.15;
     }
   });
 </script>
