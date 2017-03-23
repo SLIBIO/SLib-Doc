@@ -1,4 +1,5 @@
 import path from 'path';
+import { exec } from 'child_process';
 import webpack from 'webpack';
 import express from 'express';
 import WebpackDevServer from 'webpack-dev-server';
@@ -25,7 +26,8 @@ if (config.env === 'development') {
     next();
   });
   handler.on('push', (event) => {
-    console.log('Received a push event', event);
+    exec(path.join(__dirname, '../git_update.sh'), (error, stdout, stderr) => {
+    });
   });
   gitCallbackServer.listen(4000, () => console.log(chalk.green('gitCallbackServer is listening on port 4000')));
 
