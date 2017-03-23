@@ -36,7 +36,7 @@ ARC in Action
 Here is an example of how Automatic Reference Counting works. This example starts with a simple 
 class called Person, which defines a variable called name:
 
-::
+.. code-block:: cpp
 
    class Person: public Referable
    {
