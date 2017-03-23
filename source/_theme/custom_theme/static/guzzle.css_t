@@ -12,7 +12,9 @@ body {
   color: #333;
   line-height: 1.5;
 }
-
+.edit_github {
+  float: right;
+}
 .navigationBar {
   flex: 1;
   align-items: center;

@@ -1,14 +1,16 @@
 import sys, os
 
 sys.path.append(os.path.abspath('.'))
-
+sys.path.insert(0, os.path.abspath('_ext'))
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
-    "guzzle_sphinx_theme"
+    "guzzle_sphinx_theme",
+    "edit_on_github"
 ]
-
+edit_on_github_project = 'SLIBIO/SLib-Doc'
+edit_on_github_branch = 'master/source'
 templates_path = ['_templates']
 
 source_suffix = '.rst'
