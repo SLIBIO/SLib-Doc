@@ -11,20 +11,11 @@ import config from './config';
 
 require('babel-polyfill');
 
-const handler = githubHookHandler({ path: '/github/callback', secret: 'test1234' })
+const handler = githubHookHandler({ path: '/github', secret: 'test1234' });
 if (config.env === 'development') {
-  const docServer = express();
-  docServer.use(cors());
-  docServer.use('/', express.static(path.join(__dirname, '../client/doc/html')));
-  docServer.listen(4000, () => console.log(chalk.green('docServer is listening on port 4000')));
-
-  const server = new WebpackDevServer(webpack(webpackConfig), {
-    contentBase: '/build/',
-    hot: true,
-    historyApiFallback: true,
-  });
-  server.use(cors());
-  server.use((req, _res, next) => {
+  const gitCallbackServer = express();
+  gitCallbackServer.use(cors());
+  gitCallbackServer.use((req, _res, next) => {
     console.log('req.url', req.url);
     handler(req, _res, (err) => {
       const res = _res;
@@ -33,6 +24,14 @@ if (config.env === 'development') {
     });
     next();
   });
+  gitCallbackServer.listen(4000, () => console.log(chalk.green('gitCallbackServer is listening on port 4000')));
+
+  const server = new WebpackDevServer(webpack(webpackConfig), {
+    contentBase: '/build/',
+    hot: true,
+    historyApiFallback: true,
+  });
+  server.use(cors());
   // Serve static resources
   // server.use('/', express.static(path.join(__dirname, '../build')));
   server.use('/doc', express.static(path.join(__dirname, '../documentation/html')));
