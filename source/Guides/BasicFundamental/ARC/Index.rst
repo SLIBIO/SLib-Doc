@@ -60,7 +60,7 @@ prints message when an instance of the class is deallocated.
 The next code snippet defines threee variables of type Person, which are used to set up multiple 
 references to a new Person instance.
 
-::
+.. code-block:: cpp
 
    Ref<Person> reference1;
    Ref<Person> reference2;
@@ -68,7 +68,7 @@ references to a new Person instance.
 
 You can now create a new Person instance and assign it to one of these three variables:
 
-::
+.. code-block:: cpp
 
    reference1 = new Person("Alex");
    // Prints "Alex is being allocated"
@@ -82,7 +82,7 @@ and is not deallocated.
 If you assign the same Person instance to two more variables, two more strong references to that 
 instance are established:
 
-::
+.. code-block:: cpp
 
    reference2 = reference1;
    reference3 = reference1;
