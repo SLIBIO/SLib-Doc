@@ -1,0 +1,97 @@
+.nav_container {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  z-index: 10000;
+  line-height: 80px;
+  font-family: Work Sans,Open Sans,sans-serif;
+  transition: all .5s ease;
+}
+.nav_pinch {
+  height: 55px;
+  line-height: 55px;
+  opacity: .65;
+  background-color: #1b1c27;
+}
+.imgLogo {
+  width: 40px;
+}
+.navigationBar {
+  padding: 0 50px;
+}
+.navMenu {
+  float: right;
+  font-size: 1.25em;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: inherit;
+    line-height:inherit;
+  }
+
+  li {
+    float: left;
+    a {
+      display: block;
+      color: #888;
+      text-align: center;
+      padding: 0 7.5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all .5s ease
+    }
+    a:hover {
+      color: #fff
+    }
+  }
+}
+
+.mobileNav {
+  z-index: 1000;
+  ul {
+    background: #fff;
+    box-shadow: 0 10px 10px 1px #3b3b3b;
+    float: right;
+    width: 50%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 1em;
+    overflow: hidden;
+  }
+  li {
+    border-bottom: 1px solid #b0bec5;
+    line-height: 75px;
+    a {
+      display: block;
+      color: #3b3b3b;
+      text-align: right;
+      text-decoration: none
+    }
+  }
+  a:hover {
+    color: #f44336
+  }
+  p {
+    font-size: 1.75em;
+    color: #3b3b3b;
+    cursor: pointer;
+    text-align: right;
+    line-height:inherit;
+    margin: 0;
+  }
+  p:hover {
+    color: #f44336
+  }
+}
+
+.navigationLogo {
+  color: #1e4af4;
+  font-size: 30px;
+  float: left;
+  .logoName {
+    float: right;
+    margin-top: 5px;
+  }
+}

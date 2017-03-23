@@ -1,0 +1,39 @@
+.container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .copyRight {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .socialContainer {
+    display: flex;
+    flex-direction:row;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    .iconContainer {
+      margin-left:20px;
+    }
+
+    span {
+      font-size: 25px;
+    }
+    .fa-twitter span{
+      color: #55acee;
+    }
+    .fa-facebook span{
+      color: #3b5998;
+    }
+    .fa-github span{
+      color: #333;
+    }
+    .fa-linkedin span {
+      color: #0077B5;
+    }
+  }
+}

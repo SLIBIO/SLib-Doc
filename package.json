@@ -61,6 +61,7 @@
     "rc-collapse": "^1.6.12",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
+    "react-icons": "^2.2.3",
     "react-mdl": "^1.9.0",
     "react-mdl-extra": "^1.4.2",
     "react-router": "^3.0.0",
