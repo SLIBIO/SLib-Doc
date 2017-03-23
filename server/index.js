@@ -24,6 +24,9 @@ if (config.env === 'development') {
     });
     next();
   });
+  handler.on('push', (event) => {
+    console.log('Received a push event', event);
+  });
   gitCallbackServer.listen(4000, () => console.log(chalk.green('gitCallbackServer is listening on port 4000')));
 
   const server = new WebpackDevServer(webpack(webpackConfig), {
