@@ -3,6 +3,7 @@ import webpack from 'webpack';
 import express from 'express';
 import WebpackDevServer from 'webpack-dev-server';
 import historyApiFallback from 'connect-history-api-fallback';
+import githubHookHandler from 'github-webhook-handler';
 import chalk from 'chalk';
 import cors from 'cors';
 import webpackConfig from '../webpack.config';
@@ -10,6 +11,7 @@ import config from './config';
 
 require('babel-polyfill');
 
+const handler = githubHookHandler({ path: '/github/callback', secret: 'test1234' })
 if (config.env === 'development') {
   const docServer = express();
   docServer.use(cors());
@@ -22,6 +24,15 @@ if (config.env === 'development') {
     historyApiFallback: true,
   });
   server.use(cors());
+  server.use((req, _res, next) => {
+    console.log('req.url', req.url);
+    handler(req, _res, (err) => {
+      const res = _res;
+      res.statusCode = 404;
+      res.end('no such location');
+    });
+    next();
+  });
   // Serve static resources
   // server.use('/', express.static(path.join(__dirname, '../build')));
   server.use('/doc', express.static(path.join(__dirname, '../documentation/html')));
