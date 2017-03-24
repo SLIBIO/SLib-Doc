@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import 'react-image-gallery/styles/css/image-gallery.css';
 import 'react-mdl/extra/css/material.deep_orange-orange.min.css';
 import 'react-mdl-extra/dist/react-mdl-extra.min.css';
 import 'normalize.css/normalize.css';
 import { NavigationBar, Footer, ImageGallery } from '../components';
 import Background from '../assets/carousel-1.jpg';
+import '../styles/image-gallery.css';
 import styles from '../styles/MainScene.scss';
 
 export default class App extends Component {
