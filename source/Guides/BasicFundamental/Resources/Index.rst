@@ -288,3 +288,54 @@ A string resource provides text strings for your application.
 
    //This application name is myapp.
    String text = String::format(mayapp::string::welcome_messages::get(), userName, mailCount);
+
+Dimension
+==========
+
+   ============== =====================================================================================================
+   attribute      Description
+   ============== =====================================================================================================
+   px             Corresponds to actual pixels on the screen.
+   sw             100%sw is equal to the screen width.
+   sh             100%sh is equal to the screen height.
+   smin           100%smin is equal to the smaller of the screen width and the screen height. 
+   smax           100%smax is euqal to the greater of the screen width and the screen height.
+   vw             100%vw is equal to the viewport width.
+   vh             100%vh is equal to the viewport height.
+   vmin           100%vmin is equal to the smaller of the viewport width and the viewport height.
+   vmax           100%vmax is equal to the greater of the viewport width and the viewport height.
+   sp             Scale-independent Pixels - It is scaled by the its containing page's value of 'sp'.
+   fill           The view should be as big as its parent.
+   wrap           The view should be only big enough to enclose its content.
+   ============== =====================================================================================================
+
+
+   **Example**
+
+::
+
+   <sapp version='1'>
+      <layout type='page'
+         sp='1%sw'
+         name='MyPage'>
+         <linear width='wrap'
+            height='wrap'
+            orientation='vertical'
+            centerHorizontal='true'
+            centerVertical='true'>
+            <button name='button1'
+               width='10sp'
+               height='3sp'
+               text='Tap me!'
+               marginBottom='5%sh'/>
+            <button name='button2'
+               width='10sw'
+               height='3sw'
+               text="Tap me!"/>
+            <button name='button3'
+               width='12vw'
+               height='5vmin'
+               text="Tap me!"/>
+          </linear>
+      </layout>
+   </sapp>
