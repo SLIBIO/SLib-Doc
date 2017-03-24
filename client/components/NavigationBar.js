@@ -32,7 +32,7 @@ export default class NavContainer extends Component {
       <ul onClick={this.handleNavClick.bind(this)} key={100}>
         <li key={200}><Link to='about'>ABOUT</Link></li>
         <li key={202}><a href='./doc/Index.html'>Document</a></li>
-        <li key={203}><Link to='portfolio'>PORTFOLIO</Link></li>
+        <li key={203}><Link to='/showcase'>Showcase</Link></li>
         <li key={205}><Link to='contact'>CONTACT</Link></li>
       </ul>
     ];

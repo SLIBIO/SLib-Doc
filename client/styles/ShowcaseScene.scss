@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  align-items: center;
+  .mainContainer {
+    max-width: 1000px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    .titleContainer {
+      flex: 1;
+      padding: 30px 20px 0px 20px;
+      font-size: 30px;
+      line-height: 40px;
+      font-weight: 300;
+      color: #555;
+      text-align: center;
+    }
+    .titleDescription {
+      flex: 1;
+      padding: 30px 20px 0px 20px;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: center;
+      color: #555;
+      .contactUs {
+        color: #0e84b5;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .showcaseItemContainer {
+    width: 450px;
+    height: 350px;
+    margin: 10px;
+    .title {
+      color: #FFF;
+      background-color: #46B6AC;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+
+  :global {
+    .mdl-grid {
+      justify-content:center;
+    }
+  }
+}

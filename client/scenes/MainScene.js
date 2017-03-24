@@ -8,13 +8,6 @@ import Background from '../assets/hero-bg-01.jpg';
 import styles from '../styles/MainScene.scss';
 
 export default class App extends Component {
-  // fetchExternalHTML() {
-  //   superagent.get(`http://${window.location.host}/doc/index.html`)
-  //     .end((err, res) => {
-  //       this.setState({ html: res.text });
-  //     });
-  // }
-
   render() {
     return (
       <div>
