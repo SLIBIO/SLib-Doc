@@ -292,108 +292,25 @@ A string resource provides text strings for your application.
 Dimension
 ==========
 
-:ts:`px`
+   ============== =====================================================================================================
+   attribute      Description
+   ============== =====================================================================================================
+   px             Corresponds to actual pixels on the screen.
+   sw             100%sw is equal to the screen width.
+   sh             100%sh is equal to the screen height.
+   smin           100%smin is equal to the smaller of the screen width and the screen height. 
+   smax           100%smax is euqal to the greater of the screen width and the screen height.
+   vw             100%vw is equal to the viewport width.
+   vh             100%vh is equal to the viewport height.
+   vmin           100%vmin is equal to the smaller of the viewport width and the viewport height.
+   vmax           100%vmax is equal to the greater of the viewport width and the viewport height.
+   sp             Scale-independent Pixels - It is scaled by the its containing page's value of 'sp'.
+   fill           The view should be as big as its parent.
+   wrap           The view should be only big enough to enclose its content.
+   ============== =====================================================================================================
 
-Corresponds to actual pixels on the screen.
 
-::
-
-   <button name="button"
-      width="100px"
-      height"20px"
-      text="Hello World!"/>
-
-:ts:`sw`
-
-A sw is a unit based on the screen width.
-
-::
-
-   <button name="button"
-      width="20%sw"
-      height"5%sw"
-      text="Hello World!"/>
-
-:ts:`sh`
-
-A sh is a unit based on the screen height.
-
-::
-
-   <button name="button"
-      width="20%sw"
-      height"5%sh"
-      text="Hello World!"/>
-
-:ts:`smin`
-
-A smin is a unit based on the smaller of the screen width and the screen height.
-
-::
-
-   <button name="button"
-      width="20%smin"
-      height"5%smin"
-      text="Hello World!"/>
-
-:ts:`smax`
-
-A smax is a unit based on the larger of the screen width and the screen height.
-
-::
-
-   <button name="button"
-      width="20%smax"
-      height"5%smax"
-      text="Hello World!"/>
-
-:ts:`vw`
-
-A vw is a unit based on the width of the viewport.
-
-::
-
-   <button name="button"
-      width="20%vw"
-      height"5%vw"
-      text="Hello World!"/>
-
-:ts:`vh`
-
-A vh is a unit based on the height of the viewport.
-
-::
-
-   <button name="button"
-      width="20%vh"
-      height"5%vh"
-      text="Hello World!"/>
-
-:ts:`vmin`
-
-A vmin is a unit based on the smaller of the viewport width and the viewport height.
-
-::
-
-   <button name="button"
-      width="20%vmin"
-      height"5%vmin"
-      text="Hello World!"/>
-
-:ts:`vmax`
-
-A vmax is a unit based on the larger of the viewport width and the viewport height.
-
-::
-
-   <button name="button"
-      width="20%vmax"
-      height"5%vmax"
-      text="Hello World!"/>
-
-:ts:`sp`
-
-Scale-independent Pixels - It is scaled by the its containing page's value of 'sp'
+   **Example**
 
 ::
 
@@ -401,12 +318,24 @@ Scale-independent Pixels - It is scaled by the its containing page's value of 's
       <layout type='page'
          sp='1%sw'
          name='MyPage'>
-         
-         <button name="button"
-            centerHorizontal="true"
-            centerVertical="true"
-            width="10sp"
-            height="3sp"
-            text="Tap me!"/>
+         <linear width='wrap'
+            height='wrap'
+            orientation='vertical'
+            centerHorizontal='true'
+            centerVertical='true'>
+            <button name='button1'
+               width='10sp'
+               height='3sp'
+               text='Tap me!'
+               marginBottom='5%sh'/>
+            <button name='button2'
+               width='10sw'
+               height='3sw'
+               text="Tap me!"/>
+            <button name='button3'
+               width='12vw'
+               height='5vmin'
+               text="Tap me!"/>
+          </linear>
       </layout>
    </sapp>
