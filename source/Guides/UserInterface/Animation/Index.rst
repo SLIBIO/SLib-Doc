@@ -22,11 +22,11 @@ With transformation, you can scale, rotate, or translate the view. Transformatio
    image->setAspectRatioMode(AspectRatioMode::AdjustWidth);
    addChild(image);
 
-   image->startTransformAnimation(Transform2::getScalingMatrix(2, 2), Transform2::getScalingMatrix(1, 1), 0.5);
+   image->startTransformAnimationTo(Transform2::getScalingMatrix(2, 2), Transform2::getScalingMatrix(1, 1), 0.5);
 
 **Translation**
 
-Translates a view to its superview's coordinate system.
+Translates a view to its parent view's coordinate system.
 
 ::
 
@@ -34,7 +34,7 @@ Translates a view to its superview's coordinate system.
 
 **Scale**
 
-You can easily scale a View using setScaleAnimation or startScaleAnimation method.
+You can easily scale a View.
 
 ::
    
@@ -76,7 +76,7 @@ You can change the view's background color;
 Using Animation Object
 ------------------------
 
-An animation object lets you manage all kinds of animations.
+An animation object lets you manage the animation in detail.
 
 ::
 
@@ -87,7 +87,7 @@ An animation object lets you manage all kinds of animations.
 Animation Options
 ------------------
 
-You can specify varies options for animation in the params of startAnimation method.
+You can specify several options for animation in the params of startAnimation method.
 
 ::
 
@@ -123,7 +123,7 @@ Specifies the supported animation curves.
 Managing Multiple Animations
 -----------------------------
 
-You can manage multiple animation objects using an animation object.
+You can manage multiple animations using an animation object.
 
 ::
 
@@ -134,10 +134,11 @@ You can manage multiple animation objects using an animation object.
    view2->setScaleAnimation(animation, 2);
    view3->setFrameAnimation(animation, Rectangle(200, 300, 500, 100));
 
-   animation->start();
    animation->setOnStop([](){
        UI::alert("Animation completed");
    });
+
+   animation->start();
 
 Linking Animations
 -------------------
