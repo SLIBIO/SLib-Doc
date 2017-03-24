@@ -16,14 +16,13 @@ With transformation, you can scale, rotate, or translate the view. Transformatio
 
 ::
    
-   Ref<Animation> animation = createAnimation(1);
    Ref<ImageView> image = new ImageView;
    image->setSource(drawable::ui_my_image::get());
    image->setHeight(200);
    image->setAspectRatioMode(AspectRatioMode::AdjustWidth);
    addChild(image);
-   image->setTransformAnimation(animation, Transform2::getScalingMatrix(2, 2), Transform2::getScalingMatrix(1, 1));
-   animation->start();
+
+   image->startTransformAnimation(Transform2::getScalingMatrix(2, 2), Transform2::getScalingMatrix(1, 1), 0.5);
 
 **Translation**
 
@@ -31,18 +30,7 @@ Translates a view to its superview's coordinate system.
 
 ::
 
-   Ref<Animation> animation = createAnimation(1);
-   Ref<ImageView> image = new ImageView;
-   image->setSource(drawable::ui_my_image::get());
-   image->setWidth(200);
-   image->setAspectRatioMode(AspectRatioMode::AdjustHeight);
-   addChild(image);
-   AnimationFrames<Vector2> frame(Vector2(0, 0), Vector2(0, 0));
-   frame.addFrame(0.3, Vector2(-20, 0));
-   frame.addFrame(0.6, Vector2(-20, -20));
-   frame.addFrame(1, Vector2(-20, -40));
-   image->setTranslateAnimation(animation, frame);
-   animation->start();
+   view->startTranslateAnimationTo(Vector2(500, 500), 0.5);
 
 **Scale**
 
@@ -50,74 +38,62 @@ You can easily scale a View using setScaleAnimation or startScaleAnimation metho
 
 ::
    
-   Ref<Animation> animation = createAnimation(0.5);
-   Ref<ImageView> image = new ImageView;
-   image->setSource(drawable::ui_my_image::get());
-   image->setWidth(200);
-   image->setAspectRatioMode(AspectRatioMode::AdjustHeight);
-   addChild(image);
-   image->setScaleAnimation(animation, Vector2(1, 2));
-   animation->start();
+   view->startScaleAnimationTo(2, 0.5);
 
 **Rotate**
 
-The setRotateAnimation or startRotateAnimation method takes place in the X-Y plane. You can specify the point to use for the center of the rotation, where (0, 0) is the center point. 
+You can specify the point to use for the center of the rotation, where (0, 0) is the center point. 
 If not specified, (0, 0) is the default rotation point.
 
 ::
 
-   Ref<ImageView> image = new ImageView;
-   image->setSource(drawable::ui_my_image::get());
-   image->setWidth(200);
-   image->setAspectRatioMode(AspectRatioMode::AdjustHeight);
-   addChild(image);
-   animation = image->createRotateAnimation(SLIB_PI_DUAL * 0.25, 5);
-   animation->start();
+   image->startRotateAnimationTo(SLIB_PI_DUAL * 0.25, 0.5);
 
 **Frame**
 
-Using the setFrameAnimation or startFrameAnimation method, you can change the view's size and position.
+You can change the view's size and position.
 
 ::
 
-   Ref<Animation> animation = createAnimation(0.6);
-   Ref<ImageView> image = new ImageView;
-   image->setSource(drawable::ui_my_image::get());
-   image->setWidth(200);
-   image->setAspectRatioMode(AspectRatioMode::AdjustHeight);
-   image->setPosition(300, 300);
-   addChild(image);
-   image->setFrameAnimation(animation, Rectangle(200, 300, 500, 100));
-   animation->start();
+   view->startFrameAnimationTo(Rectangle(200, 300, 500, 100), 0.5);
 
 **Alpha**
 
-Using the setAlphaAnimation or startAlphaAnimation method, you can gradually change the transparency of the view.
+You can gradually change the transparency of the view.
 
 ::
 
-   Ref<ImageView> image = new ImageView;
-   image->setSource(drawable::ui_my_image::get());
-   image->setWidth(200);
-   image->setAspectRatioMode(AspectRatioMode::AdjustHeight);
-   addChild(image);
-   image->startAlphaAnimation(0.1, 5);
+   view->startAlphaAnimationTo(0.1, 0.5);
 
 **BackgroundColor**
 
-Using the setBackgroundColorAnimation or startBackgroundColorBackground method, you can change the view's background color;
+You can change the view's background color;
 
 ::
 
-   Ref<View> v = new View;
-   v->setWidth(200);
-   v->setHeight(200);
-   v->setBackgroundColor(Color::Red);
-   addChild(v);
-   v->startBackgroundColorBackground(Color4f(0.3, 1, 0.5, 0.5, 1), 0.5);
+   view->startBackgroundColorBackgroundTo(Color4f(0.3, 1, 0.5, 0.5, 1), 0.5);
+
+Using Animation Object
+------------------------
+
+An animation object lets you manage all kinds of animations.
+
+::
+
+   Ref<Animation> animation = view->createTranslateAnimationTo(Vector2(300, 300), 3);
+   animation->setRepeatCount(5);
+   animation->start();
 
 Animation Options
 ------------------
+
+You can specify varies options for animation in the params of startAnimation method.
+
+::
+
+   view->startAlphaAnimationTo(0.3, 0.5, [](){
+       UI::alert("Animation completed");
+   }, AnimationCurve::EaseOut, AnimationFlags::Repeat | AnimationFlags::AutoReverse);
 
 **Repeating**
 
@@ -125,12 +101,12 @@ Use setRepeatForever, setRepeatCount, setAutoReverse methods to set the number o
 
 ::
 
-   Ref<Animation> animation1 = createAnimation(2);
+   Ref<Animation> animation1 = view->createAnimation(2);
    animation1->setRepeatCount(5); // Repeats animation1 for 5 times.
    animation1->setAutoReverse(); // animation1 runs in reverse at the end of each complete cycle.
    ...
 
-   Ref<Animation> animation2 = createAnimation(2);
+   Ref<Animation> animation2 = view->createAnimation(2);
    animation2->setRepeatForever(); // Repeats animation2 forever.
    ...
 
@@ -140,12 +116,46 @@ Specifies the supported animation curves.
 
 ::
 
-   Ref<View> v = new View;
-   v->setWidth(200);
-   v->setHeight(200);
-   v->setBackgroundColor(Color::Red);
-   addChild(v);
-   v->startBackgroundColorBackground(Color4f(0.3, 1, 0.5, 0.5, 1) , 5, [](){
-       UI::alert("Animation completed");
-   }, AnimationCurve::EaseOut);
+   Ref<Animation> animation = view->createAnimation(2);
+   animation->setAnimationCurve(AnimationCurve::Bounce);
+   ...
    
+Managing Multiple Animations
+-----------------------------
+
+You can manage multiple animation objects using an animation object.
+
+::
+
+   Ref<Animation> animation = createAnimation(0.5);
+   animation->setRepeatForever(true);
+
+   view1->setTranslateAnimation(animation, Vector2(300, 300));
+   view2->setScaleAnimation(animation, 2);
+   view3->setFrameAnimation(animation, Rectangle(200, 300, 500, 100));
+
+   animation->start();
+   animation->setOnStop([](){
+       UI::alert("Animation completed");
+   });
+
+Linking Animations
+-------------------
+
+You can link several animations in series.
+
+::
+
+   Ref<Animation> animation1 = createAnimation(0.5);
+   ...
+
+   Ref<Animation> animation2 = createAnimation(1);
+   ...
+
+   Ref<Animation> animation3 = createAnimation(1.5);
+   ...
+
+   animation1->linkAnimation(animation2);
+   animation2->linkAnimation(animation3);
+
+   animation1->start();
