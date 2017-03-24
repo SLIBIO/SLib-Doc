@@ -31,6 +31,14 @@ export default class App extends Component {
             items={images}
             slideInterval={2000}
           />
+          <div className={styles.descriptionContainer}>
+            <div className={styles.header1}>
+              Make it fast
+            </div>
+            <div className={styles.header2}>
+              SLib is a C++ cross-platform framework built for speed
+            </div>
+          </div>
           <Footer />
         </div>
       </div>

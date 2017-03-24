@@ -10,11 +10,35 @@
       * {
         height: 100%;
       }
+      button {
+        z-index: 10000;
+      }
       .galleryImage {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 50% 50%;
       }
+    }
+  }
+  .descriptionContainer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    flex-direction: column;
+    .header1 {
+      color: #FFF;
+      font-size: 4rem;
+    }
+    .header2 {
+      margin-top: 3rem;
+      font-size: 1.5rem;
+      color: #FFF;
     }
   }
 }

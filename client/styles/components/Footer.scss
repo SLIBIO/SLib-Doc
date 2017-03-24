@@ -11,8 +11,8 @@
   flex-direction: column;
   .copyRight {
     font-size: 18px;
-    margin-bottom: 30px;
-    color: #454545
+    margin-bottom: 10px;
+    color: #999
   }
   .socialContainer {
     display: flex;
@@ -33,7 +33,7 @@
       color: #3b5998;
     }
     .fa-github span{
-      color: #333;
+      //color: #333;
     }
     .fa-linkedin span {
       color: #0077B5;

@@ -2,30 +2,31 @@ import React, { Component } from 'react';
 import { Grid, Card, CardTitle, CardText } from 'react-mdl';
 import { NavigationBar } from '../components';
 import styles from '../styles/ShowcaseScene.scss';
+import Background from '../assets/carousel-1.jpg';
 
 const showcaseItems = [{
   title: 'Update',
-  backgroundImage: 'url(http://www.getmdl.io/assets/demos/dog.png)',
+  backgroundImage: `url(${Background})`,
   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenan convallis.'
 }, {
   title: 'Update',
-  backgroundImage: 'url(http://www.getmdl.io/assets/demos/dog.png)',
+  backgroundImage: `url(${Background})`,
   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenan convallis.'
 }, {
   title: 'Update',
-  backgroundImage: 'url(http://www.getmdl.io/assets/demos/dog.png)',
+  backgroundImage: `url(${Background})`,
   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenan convallis.'
 }, {
   title: 'Update',
-  backgroundImage: 'url(http://www.getmdl.io/assets/demos/dog.png)',
+  backgroundImage: `url(${Background})`,
   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenan convallis.'
 }, {
   title: 'Update',
-  backgroundImage: 'url(http://www.getmdl.io/assets/demos/dog.png)',
+  backgroundImage: `url(${Background})`,
   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenan convallis.'
 }, {
   title: 'Update',
-  backgroundImage: 'url(http://www.getmdl.io/assets/demos/dog.png)',
+  backgroundImage: `url(${Background})`,
   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenan convallis.'
 }];
 
