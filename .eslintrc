@@ -12,6 +12,7 @@
     "jsx-quotes": [2, "prefer-single"],
     "import/prefer-default-export": 0,
     "no-unused-vars": 0,
+    "no-underscore-dangle": 0,
     "no-alert": 0,
     "jsx-a11y/anchor-has-content": 0,
     "jsx-a11y/href-no-hash": 0,

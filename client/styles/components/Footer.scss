@@ -1,9 +1,11 @@
 .container {
+  z-index: 1000;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   display: flex;
+  background-color: rgba(15, 20, 38, 0.8);
   align-items: center;
   justify-content: center;
   flex-direction: column;

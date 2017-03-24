@@ -1,18 +1,36 @@
 import React, { Component } from 'react';
-import superagent from 'superagent';
+import 'react-image-gallery/styles/css/image-gallery.css';
 import 'react-mdl/extra/css/material.deep_orange-orange.min.css';
 import 'react-mdl-extra/dist/react-mdl-extra.min.css';
 import 'normalize.css/normalize.css';
-import { NavigationBar, Footer } from '../components';
-import Background from '../assets/hero-bg-01.jpg';
+import { NavigationBar, Footer, ImageGallery } from '../components';
+import Background from '../assets/carousel-1.jpg';
 import styles from '../styles/MainScene.scss';
 
 export default class App extends Component {
   render() {
+    const images = [
+      {
+        original: `${Background}`,
+        thumbnail: '',
+      },
+      {
+        original: `${Background}`,
+        thumbnail: ''
+      },
+    ];
+
     return (
       <div>
         <NavigationBar />
-        <div className={styles.container} style={{ backgroundImage: `url(${Background})` }}>
+        <div className={styles.container}>
+          <ImageGallery
+            showFullscreenButton={false}
+            showThumbnails={false}
+            showPlayButton={false}
+            items={images}
+            slideInterval={2000}
+          />
           <Footer />
         </div>
       </div>
