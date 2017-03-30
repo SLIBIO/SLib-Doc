@@ -59,15 +59,11 @@ XML attributes
 
 **width**
 
-Specifies the width of the view. This is a required attribute for any view. Its value may be a dimension (such as "5%sw") for a constant width or one of the special constants.
-
-May be a dimension value, which is a floating point number. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
+Specifies the width of the view. This is a required attribute for any view. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
 
 **height**
 
-Specifies the basic height of the view. This is a required attribute for any view. Its value may be a dimension for a constant height or one of the special constants.
-
-May be a dimension value, which is a floating point number. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
+Specifies the basic height of the view. This is a required attribute for any view. Its value may be a dimension for a constant height or one of the special constants. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
 
 **alignLeft**
 
@@ -95,9 +91,7 @@ May be a reference to another view. In this case, makes the bottom edge of this 
 
 **alignCenter**
 
-If true, centers this child horizontally and vertically within its parent.
-
-May be a boolean value, such as "true" or "false".
+If true, centers this child horizontally and vertically within its parent. May be a boolean value, such as "true" or "false".
 
 **toLeftOf**
 
@@ -117,39 +111,27 @@ Positions the top edge of this view to the bottom of the given anchor view name.
 
 **left**
 
-Sets the left edge of the view. Its value may be a dimension for a constant.
-
-May be a dimension value, which is a floating point number. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
+Sets the left edge of the view. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
 
 **top**
 
-Sets the top edge of the view. Its value may be a dimension for a constant.
-
-May be a dimension value, which is a floating point number. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
+Sets the top edge of the view. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
 
 **minWidth**
 
-It is used to set the minimum width of a view. This prevents the value of the width from becoming smaller than minWidth. Its value may be a dimension for a constant.
-
-May be a dimension value, which is a floating point number. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
+It is used to set the minimum width of a view. This prevents the value of the width from becoming smaller than minWidth. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
 
 **maxWidth**
 
-It is used to set the maximum width of a view. This prevents the value of the width from becoming larger than maxWidth. Its value may be a dimension for a constant.
-
-May be a dimension value, which is a floating point number. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
+It is used to set the maximum width of a view. This prevents the value of the width from becoming larger than maxWidth. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
 
 **minHeight**
 
-It is used to set the minimum height of a view. This prevents the value of the height from becoming smaller than minHeight. Its value may be a dimension for a constant.
-
-May be a dimension value, which is a floating point number. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
+It is used to set the minimum height of a view. This prevents the value of the height from becoming smaller than minHeight. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
 
 **maxHeight**
 
-It is used to set the maximum height of a view. This prevents the value of the height from becoming larger than maxHeight. Its value may be a dimension for a constant.
-
-May be a dimension value, which is a floating point number. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
+It is used to set the maximum height of a view. This prevents the value of the height from becoming larger than maxHeight. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
 
 **aspectRatio**
 
@@ -157,83 +139,59 @@ It is not necessary to specify width/height if you specify aspectRatio, then the
 
 **marginLeft**
 
-Specifies extra space on the left side of this view. Its value may be a dimension for a constant.
-
-May be a dimension value, which is a floating point number. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
+Specifies extra space on the left side of this view. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
 
 **marginTop**
 
-Specifies extra space on the top of this view. Its value may be a dimension for a constant.
-
-May be a dimension value, which is a floating point number. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
+Specifies extra space on the top of this view. May be a dimension value, which is a floating point number. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
 
 **marginRight**
 
-Specifies extra space on the right of this view. Its value may be a dimension for a constant.
-
-May be a dimension value, which is a floating point number. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
+Specifies extra space on the right of this view. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
 
 **marginBottom**
 
-Specifies extra space on the bottom of this view. Its value may be a dimension for a constant.
-
-May be a dimension value, which is a floating point number. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
+Specifies extra space on the bottom of this view. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
 
 **paddingLeft**
 
-Specifies the padding of the left edge. Its value may be a dimension for a constant.
-
-May be a dimension value, which is a floating point number. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
+Specifies the padding of the left edge. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
 
 **paddingTop**
 
-Specifies the padding of the top edge. Its value may be a dimension for a constant.
-
-May be a dimension value, which is a floating point number. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
+Specifies the padding of the top edge. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
 
 **paddingRight**
 
-Specifies the padding of the right edge. Its value may be a dimension for a constant.
-
-May be a dimension value, which is a floating point number. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
+Specifies the padding of the right edge. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
 
 **paddingBottom**
 
-Specifies the padding of the bottom edge. Its value may be a dimension for a constant.
-
-May be a dimension value, which is a floating point number. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
+Specifies the padding of the bottom edge. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
 
 **visibility**
 
-Controls the initial visibility of the view.
+Controls the initial visibility of the view. Must be one of the following constant values.
 
-Must be one of the following constant values.
-
-   ============== =====================================================================================================
-   Constant       Description
-   ============== =====================================================================================================
-   gone           Completely hidden, as if the view had not been added.
-   hidden         Not displayed, but taken into account during layout.
-   visible        Visible on screen.
-   ============== =====================================================================================================
+============== =====================================================================================================
+Constant       Description
+============== =====================================================================================================
+gone           Completely hidden, as if the view had not been added.
+hidden         Not displayed, but taken into account during layout.
+visible        Visible on screen.
+============== =====================================================================================================
 
 **enabled**
 
-If false, ignores all UI events on this view.
-
-May be a boolean value, such as "true" or "false"
+If false, ignores all UI events on this view. May be a boolean value, such as "true" or "false"
 
 **clipping**
 
-It lets you specify a rectangle to clip an absolutely positioned view.
-
-May be a boolean value, such as "true" or "false"
+It lets you specify a rectangle to clip an absolutely positioned view. May be a boolean value, such as "true" or "false"
 
 **drawing**
 
-If true, custom drawing is enabled.
-
-May be a boolean value, such as "true" or "false"
+If true, custom drawing is enabled. May be a boolean value, such as "true" or "false"
 
 **background**
 
@@ -249,35 +207,31 @@ A drawable to use when you mouse over the view. The values that can be set, are:
 
 **backgroundScale**
 
-Options for scaling the bounds of an image to the bounds of this view.
+Options for scaling the bounds of an image to the bounds of this view. Must be one of the following constant values.
 
-Must be one of the following constant values.
-
-   ============== =================================================================================================================================
-   Constant       Description
-   ============== =================================================================================================================================
-   cover          Scale the background image to be as large as possible so that the background area is completely covered by the background image.
-   contain        Scale the background image to the largest size such that both its width and its height can fit inside the content area. 
-   stretch        Scale the background image to fit the size of this view by changing the aspect ratio of the content if necessary.
-   ============== =================================================================================================================================
+============== =================================================================================================================================
+Constant       Description
+============== =================================================================================================================================
+cover          Scale the background image to be as large as possible so that the background area is completely covered by the background image.
+contain        Scale the background image to the largest size such that both its width and its height can fit inside the content area. 
+stretch        Scale the background image to fit the size of this view by changing the aspect ratio of the content if necessary.
+============== =================================================================================================================================
 
 **backgroundAlign**
 
-Sets the starting position of the background image.
+Sets the starting position of the background image. Must be one of the following constant values.
 
-Must be one of the following constant values.
-
-   ============== =================================================================================================================================
-   Constant       Description
-   ============== =================================================================================================================================
-   center         Place the background image in the center of this view in both the vertical and horizontal axis, not changing its size.
-   left           Push the background image to the left of this view, not changing its size.
-   right          Push the background image to the right of this view, not changing its size.
-   middle         Place the background image in the middle of this view, not changing its size.
-   top            Push the background image to the top of this view, not changing its size.
-   bottom         Push the background image to the bottom of this view, not changing its size.
-   top|center     You can combine multiple values of the above constants.
-   ============== =================================================================================================================================
+============== =================================================================================================================================
+Constant       Description
+============== =================================================================================================================================
+center         Place the background image in the center of this view in both the vertical and horizontal axis, not changing its size.
+left           Push the background image to the left of this view, not changing its size.
+right          Push the background image to the right of this view, not changing its size.
+middle         Place the background image in the middle of this view, not changing its size.
+top            Push the background image to the top of this view, not changing its size.
+bottom         Push the background image to the bottom of this view, not changing its size.
+top|center     You can combine multiple values of the above constants.
+============== =================================================================================================================================
 
 **backgroundColor**
 
@@ -285,51 +239,41 @@ A color to use as the background color. The values that can be set, are hexadeci
 
 **border**
 
-If true, shows the border on this view.
-
-May be a boolean value, such as "true" or "false"
+If true, shows the border on this view. May be a boolean value, such as "true" or "false"
 
 **borderWidth**
 
-Sets the width of the border.
-
-Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
+Sets the width of the border. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
 
 **borderColor**
 
-Sets the color of the border.
-
-The values that can be set, are hexadecimal strings and colors, such as "#c8c8c8", "red", "rgb(255, 200, 200)" and "rgba(200, 200, 200, 200)"
+Sets the color of the border. The values that can be set, are hexadecimal strings and colors, such as "#c8c8c8", "red", "rgb(255, 200, 200)" and "rgba(200, 200, 200, 200)"
 
 **borderStyle**
 
-Sets the style of the border.
+Sets the style of the border. Must be one of the following constant values.
 
-Must be one of the following constant values.
-
-   ============== =================================================================================================================================
-   Constant       Description
-   ============== =================================================================================================================================
-   solid          Specifies a solid border.
-   dot            Represents a border style that consists of a dotted line.
-   dash           Represents a border style that consists of a series of dashed lines.
-   dashDot        Represents a border style that consists of a dash, followed by a dot.
-   dashDotDot     Represents a border style that consists of a dash, followed by two dots.
-   ============== =================================================================================================================================
+============== =================================================================================================================================
+Constant       Description
+============== =================================================================================================================================
+solid          Specifies a solid border.
+dot            Represents a border style that consists of a dotted line.
+dash           Represents a border style that consists of a series of dashed lines.
+dashDot        Represents a border style that consists of a dash, followed by a dot.
+dashDotDot     Represents a border style that consists of a dash, followed by two dots.
+============== =================================================================================================================================
 
 **boundShape**
 
-Sets the shape of the bound.
+Sets the shape of the bound. Must be one of the following constant values.
 
-Must be one of the following constant values.
-
-   ============== =================================================================================================================================
-   Constant       Description
-   ============== =================================================================================================================================
-   rectangle      Specifies a rectangle bound.
-   ellipse        Specifies an ellipse bound.
-   roundRect      Specifies a round rectangle bound.
-   ============== =================================================================================================================================
+============== =================================================================================================================================
+Constant       Description
+============== =================================================================================================================================
+rectangle      Specifies a rectangle bound.
+ellipse        Specifies an ellipse bound.
+roundRect      Specifies a round rectangle bound.
+============== =================================================================================================================================
 
 **fontFamily**
 
@@ -341,58 +285,84 @@ Size of the text. Avaiable units and constants are: fill, wrap, px, sw, sh, smin
 
 **fontBold**
 
-If true, the text font will be bold.
-
-May be a boolean value, such as "true" or "false"
+If true, the text font will be bold. May be a boolean value, such as "true" or "false"
 
 **fontItalic**
 
-If true, the text font will be italic.
-
-May be a boolean value, such as "true" or "false"
+If true, the text font will be italic. May be a boolean value, such as "true" or "false"
 
 **fontUnderline**
 
-If true, defines a line below the text.
-
-May be a boolean value, such as "true" or "false"
+If true, defines a line below the text. May be a boolean value, such as "true" or "false"
 
 **alpha**
 
-alpha property of the view, as a value between 0 (completely transparent) and 1 (completely opaque)
-
-May bea a floating point value.
+alpha property of the view, as a value between 0 (completely transparent) and 1 (completely opaque). May bea a floating point value.
 
 **scrolling**
 
-Defines the scroll direction of the view.
+Defines the scroll direction of the view. Must be one of the following constant values.
 
-Must be one of the following constant values.
-
-   ============== =================================================================================================================================
-   Constant       Description
-   ============== =================================================================================================================================
-   horizontal     The view scrolls content horizontally.
-   vertical       The view scrolls content vertically.
-   both           The view scrolls content both horizontally and vertically.
-   ============== =================================================================================================================================
+============== =================================================================================================================================
+Constant       Description
+============== =================================================================================================================================
+horizontal     The view scrolls content horizontally.
+vertical       The view scrolls content vertically.
+both           The view scrolls content both horizontally and vertically.
+============== =================================================================================================================================
 
 **scrollBars**
 
-Defines the scroll bar of the view.
+Defines the scroll bar of the view. Must be one of the following constant values.
 
-Must be one of the following constant values.
-
-   ============== =================================================================================================================================
-   Constant       Description
-   ============== =================================================================================================================================
-   horizontal     Shows only horizontal scroll bar.
-   vertical       Shows only vertical scroll bar.
-   both           Shows both horizontal and vertical bar.
-   ============== =================================================================================================================================
+============== =================================================================================================================================
+Constant       Description
+============== =================================================================================================================================
+horizontal     Shows only horizontal scroll bar.
+vertical       Shows only vertical scroll bar.
+both           Shows both horizontal and vertical bar.
+============== =================================================================================================================================
 
 **paging**
 
-If true, the view will support the paging mode.
+If true, the view will support the paging mode. Must be one of the following constant values.
 
-Must be one of the following constant values.
+**pageWidth**
+
+Sets the width of a page in the paging mode. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
+
+**pageHeight**
+
+Sets the height of a page in the paging mode. Avaiable units and constants are: fill, wrap, px, sw, sh, smin, smax, vw, vh, vmin, vmax, sp.
+
+**scrollingByMouse**
+
+If true, you can scroll the view by mouse. May be a boolean value, such as "true" or "false".
+
+**scrollingByTouch**
+
+If true, you can scroll the view by touch. May be a boolean value, such as "true" or "false".
+
+**scrollingByKeyword**
+
+If true, you can scroll the view by touch. May be a boolean value, such as "true" or "false".
+
+**touchMultipleChildren**
+
+If true, you can manage multiple touches on the view. May be a boolean value, such as "true" or "false"
+
+**tabStop**
+
+If true, sets tab stop on this view. May be a boolean value, such as "true" or "false"
+
+**instance**
+
+If false, the view will be not native control. May be a boolean value, such as "true" or "false"
+
+**nativeWidget**
+
+If false, the view will be not native widget. May be a boolean value, such as "true" or "false"
+
+**hardwareLayer**
+
+If true, hints to the UI platform to allocate a dedicated hardware layer for this view, and optimize the animation performance on this view.

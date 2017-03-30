@@ -13,9 +13,9 @@ apply to another XML resource with attributes such as drawable.
 
 **EXAMPLE:**
 
- With an image saved at res/image/myimage.png, this layout XML applies the image to a View:
+With an image saved at res/image/myimage.png, this layout XML applies the image to a View:
 
- ::
+::
 
    <image
       width="wrap"
@@ -24,9 +24,9 @@ apply to another XML resource with attributes such as drawable.
    />
 
 
- The following application code retrieves the image as a Drawable:
+The following application code retrieves the image as a Drawable:
 
- ::
+::
 
    Ref<Drawable> drawable = drawable::myimage::get()
 
@@ -37,7 +37,7 @@ A layout resource defines the architecture for the UI in a page or a component o
 
 **SYNTAX:**
 
- ::
+::
 
    <sapp version="1">
       <layout type=["view | page | window"]
@@ -61,72 +61,78 @@ A layout resource defines the architecture for the UI in a page or a component o
       </strings>
    </sapp>
 
-**ELEMENTS:**
+Elements
+---------
 
- :ts:`<layout>`
-   A container for other view elements. There are several kinds of layouts: page, view, window.
+**<layout>**
 
-   :aspect:`attributes:`
+A container for other view elements. There are several kinds of layouts: page, view, window.
 
-   ============== =====================================================================================================
-   attribute      Description
-   ============== =====================================================================================================
-   name           A unique resource name for the element, which you can use to obtain a reference to the layout.
-   width          Dimension or keyword. The width for the layout, as a dimension value or a keyword("wrap" | "fill" | "*").
-   height         Dimension or keyword. The height for the layout, as a dimension value or a keyword("wrap" | "fill" | "*").
-   ============== =====================================================================================================
+:aspect:`attributes:`
 
- :ts:`<view>`
-   An individual UI component. Different kinds of view objects include linear, group, edit, text, password, textArea, label and button etc.
+============== =====================================================================================================
+attribute      Description
+============== =====================================================================================================
+name           A unique resource name for the element, which you can use to obtain a reference to the layout.
+width          Dimension or keyword. The width for the layout, as a dimension value or a keyword("wrap" | "fill" | "*").
+height         Dimension or keyword. The height for the layout, as a dimension value or a keyword("wrap" | "fill" | "*").
+============== =====================================================================================================
 
-   :aspect:`attributes:`
+**<view>**
 
-   ============== =====================================================================================================
-   attribute      Description
-   ============== =====================================================================================================
-   name           A unique resource name for the element, which you can use to obtain a reference to the layout.
-   width          Dimension or keyword. The width for the layout, as a dimension value or a keyword("wrap" | "fill" | "*").
-   height         Dimension or keyword. The height for the layout, as a dimension value or a keyword("wrap" | "fill" | "*").
-   ============== =====================================================================================================
+An individual UI component. Different kinds of view objects include linear, group, edit, text, password, textArea, label and button etc.
 
- :ts:`<layout-include>`
-   Defines elements which can be re-used in other layouts. 
-   This is particularly useful when you plan to include this layout in another layout file using <include>.
+:aspect:`attributes:`
 
-   :aspect:`attributes:`
+============== =====================================================================================================
+attribute      Description
+============== =====================================================================================================
+name           A unique resource name for the element, which you can use to obtain a reference to the layout.
+width          Dimension or keyword. The width for the layout, as a dimension value or a keyword("wrap" | "fill" | "*").
+height         Dimension or keyword. The height for the layout, as a dimension value or a keyword("wrap" | "fill" | "*").
+============== =====================================================================================================
 
-   ============== =====================================================================================================
-   attribute      Description
-   ============== =====================================================================================================
-   name           Resource name.
-   ============== =====================================================================================================
+**<layout-include>**
 
- :ts:`<include>`
-   Includes a layout-include into this layout.
+Defines elements which can be re-used in other layouts. 
+This is particularly useful when you plan to include this layout in another layout file using <include>.
 
-   :aspect:`attributes:`
+:aspect:`attributes:`
 
-   ============== =====================================================================================================
-   attribute      Description
-   ============== =====================================================================================================
-   src            layout-include resource. Reference to a layout-include resource.
-   ============== =====================================================================================================
+============== =====================================================================================================
+attribute      Description
+============== =====================================================================================================
+name           Resource name.
+============== =====================================================================================================
 
- :ts:`<import>`
-   Imports a layout as a new view into this layout.
+**<include>**
+   
+Includes a layout-include into this layout.
 
-   :aspect:`attributes:`
+:aspect:`attributes:`
 
-   ============== =====================================================================================================
-   attribute      Description
-   ============== =====================================================================================================
-   layout         Layout resource. Reference to a layout resource.
-   name           Resource name.
-   ============== =====================================================================================================
+============== =====================================================================================================
+attribute      Description
+============== =====================================================================================================
+src            layout-include resource. Reference to a layout-include resource.
+============== =====================================================================================================
+
+**<import>**
+   
+Imports a layout as a new view into this layout.
+
+:aspect:`attributes:`
+
+============== =====================================================================================================
+attribute      Description
+============== =====================================================================================================
+layout         Layout resource. Reference to a layout resource.
+name           Resource name.
+============== =====================================================================================================
 
 **EXAMPLE:**
 
- ::
+::
 
    <sapp version="1">
       <layout type="page"
@@ -153,9 +159,9 @@ A layout resource defines the architecture for the UI in a page or a component o
       </strings>
    </sapp>
 
- This application name is myapp and you can load the above layout like so:
+This application name is myapp and you can load the above layout like so:
 
- ::
+::
 
    #include "../res/resources.h"
    
@@ -175,7 +181,7 @@ A style resource defines the format and look for a UI. A style can be applied to
 
 **SYNTAX:**
 
- ::
+::
 
    <layout-style
       name='style_name'
@@ -184,22 +190,23 @@ A style resource defines the format and look for a UI. A style can be applied to
 
 **ELEMENTS:**
 
- :ts:`<layout-style>`
-   Defines a single style.
+:ts:`<layout-style>`
+   
+Defines a single style.
 
-   :aspect:`attributes:`
+:aspect:`attributes:`
 
-   ============== =====================================================================================================
-   attribute      Description
-   ============== =====================================================================================================
-   layout         Style name.
-   ============== =====================================================================================================
+============== =====================================================================================================
+attribute      Description
+============== =====================================================================================================
+name         Style name.
+============== =====================================================================================================
 
 **EXAMPLE:**
 
- XML file for the style:
+XML file for the style:
 
- ::
+::
 
    <sapp version='1'>'
       <layout-style
@@ -212,9 +219,9 @@ A style resource defines the format and look for a UI. A style can be applied to
       />
    </sapp>
 
- XML file that applies the sylte to a Label:
+XML file that applies the sylte to a Label:
 
- ::
+::
 
    <label
       styles="style_label"
@@ -227,7 +234,7 @@ A string resource provides text strings for your application.
 
 **SYNTAX:**
 
- ::
+::
 
     <strings>
        <string name='string_name'>text_string</string>
@@ -235,56 +242,58 @@ A string resource provides text strings for your application.
 
 **ELEMENTS:**
 
- :ts:`<strings>`
-   This is a element containing several string elements.
+:ts:`<strings>`
+   
+This is a element containing several string elements.
 
-   :aspect:`attributes:`
+:aspect:`attributes:`
 
-   ============== =====================================================================================================
-   attribute      Description
-   ============== =====================================================================================================
-   locale         Defines the language for this strings
-   ============== =====================================================================================================
+============== =====================================================================================================
+attribute      Description
+============== =====================================================================================================
+locale         Defines the language for this strings
+============== =====================================================================================================
 
- :ts:`<string>`
-   A string element.
+:ts:`<string>`
 
-   :aspect:`attributes:`
+A string element.
 
-   ============== =====================================================================================================
-   attribute      Description
-   ============== =====================================================================================================
-   name           Name for this string.
-   locale         Defines the language for this string.
-   ============== =====================================================================================================
+:aspect:`attributes:`
+
+============== =====================================================================================================
+attribute      Description
+============== =====================================================================================================
+name           Name for this string.
+locale         Defines the language for this string.
+============== =====================================================================================================
 
 **EXAMPLE:**
 
- ::
+::
 
    <strings>
       <string name='hello'>Hello!</string>
    </strings>
 
- This layout XML applies a string to a View:
+This layout XML applies a string to a View:
 
- ::
+::
 
    <label
       width="wrap"
       height="wrap"
       text="@string/hello"/>
 
- If you need to format your strings using String::format(String& szFormat) then you can do so by 
- putting your format arguments in the string resource.
+If you need to format your strings using String::format(String& szFormat) then you can do so by 
+putting your format arguments in the string resource.
 
- ::
+::
 
    <string name="welcome_messages">Hello, %s! You have %d new messages.</string>
 
- You can format the string with arguments from your application like this:
+You can format the string with arguments from your application like this:
 
- ::
+::
 
    //This application name is myapp.
    String text = String::format(mayapp::string::welcome_messages::get(), userName, mailCount);
@@ -292,25 +301,25 @@ A string resource provides text strings for your application.
 Dimension
 ==========
 
-   ============== =====================================================================================================
-   attribute      Description
-   ============== =====================================================================================================
-   px             Corresponds to actual pixels on the screen.
-   sw             100%sw is equal to the screen width.
-   sh             100%sh is equal to the screen height.
-   smin           100%smin is equal to the smaller of the screen width and the screen height. 
-   smax           100%smax is euqal to the greater of the screen width and the screen height.
-   vw             100%vw is equal to the viewport width.
-   vh             100%vh is equal to the viewport height.
-   vmin           100%vmin is equal to the smaller of the viewport width and the viewport height.
-   vmax           100%vmax is equal to the greater of the viewport width and the viewport height.
-   sp             Scale-independent Pixels - It is scaled by the its containing page's value of 'sp'.
-   fill           The view should be as big as its parent.
-   wrap           The view should be only big enough to enclose its content.
-   ============== =====================================================================================================
+============== =====================================================================================================
+Dimension      Description
+============== =====================================================================================================
+px             Corresponds to actual pixels on the screen.
+sw             100%sw is equal to the screen width.
+sh             100%sh is equal to the screen height.
+smin           100%smin is equal to the smaller of the screen width and the screen height. 
+smax           100%smax is euqal to the greater of the screen width and the screen height.
+vw             100%vw is equal to the viewport width.
+vh             100%vh is equal to the viewport height.
+vmin           100%vmin is equal to the smaller of the viewport width and the viewport height.
+vmax           100%vmax is equal to the greater of the viewport width and the viewport height.
+sp             Scale-independent Pixels - It is scaled by the its containing page's value of 'sp'.
+fill           The view should be as big as its parent.
+wrap           The view should be only big enough to enclose its content.
+============== =====================================================================================================
 
 
-   **Example**
+**Example**
 
 ::
 
