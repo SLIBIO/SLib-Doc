@@ -92,6 +92,9 @@ module.exports = {
     }, {
       test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
       loader: 'url-loader?limit=10000&name=assets/[hash].[ext]'
+    }, {
+      test: /\.(ttf|eot)$/,
+      loader: 'file?name=assets/[name].[ext]'
     }]
   },
   postcss: () => [precss, autoprefixer],

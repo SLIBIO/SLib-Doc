@@ -30,10 +30,10 @@ export default class NavContainer extends Component {
   navigationLinks() {
     return [
       <ul onClick={this.handleNavClick.bind(this)} key={100}>
-        <li key={200}><Link to='about'>ABOUT</Link></li>
         <li key={202}><a href='./doc/Index.html'>Document</a></li>
-        <li key={203}><Link to='/showcase'>Showcase</Link></li>
-        <li key={205}><Link to='contact'>CONTACT</Link></li>
+        <li key={200}><Link to='about'>FAQ</Link></li>
+        <li key={203}><Link to='/showcase'>About US</Link></li>
+        <li key={205}><Link to='contact'>REGISTER</Link></li>
       </ul>
     ];
   }
@@ -71,15 +71,15 @@ export default class NavContainer extends Component {
   }
 
   renderNavigation() {
-    const detector = new MobileDetect(window.navigator.userAgent);
-    if (this.state.windowWidth <= 700 || detector.mobile()) {
-      return [
-        <div key={101} className={styles.mobileNav}>
-          <p onClick={this.handleNavClick.bind(this)}><MobileNav /></p>
-          {this.renderMobileNav()}
-        </div>
-      ];
-    }
+    // const detector = new MobileDetect(window.navigator.userAgent);
+    // if (this.state.windowWidth <= 700 || detector.mobile()) {
+    //   return [
+    //     <div key={101} className={styles.mobileNav}>
+    //       <p onClick={this.handleNavClick.bind(this)}><MobileNav /></p>
+    //       {this.renderMobileNav()}
+    //     </div>
+    //   ];
+    // }
     return [
       <div key={102} className={styles.navMenu}>
         {this.navigationLinks()}
@@ -89,13 +89,17 @@ export default class NavContainer extends Component {
 
   render() {
     return (
-      <div key={103} className={this.state.navClasses}>
+      <div>
+        <div key={103} className={styles.menuBorder} />
         <div key={200} className={styles.navigationBar}>
           <div key={300} className={styles.navigationLogo}>
             <img role='presentation' src={`${SlibIcon}`} className={styles.imgLogo} />
-            <div className={styles.logoName}>Lib</div>
           </div>
           {this.renderNavigation()}
+        </div>
+        <div className={styles.contactBorder} />
+        <div className={styles.contactLabel}>
+          CONTACT
         </div>
       </div>
     );
