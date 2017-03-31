@@ -57,7 +57,7 @@ class called Person, which defines a variable called name:
 The Person class has a structor that sets the instance's name and destructor that 
 prints message when an instance of the class is deallocated.
 
-The next code snippet defines threee variables of type Person, which are used to set up multiple 
+The next code snippet defines three variables of type Person, which are used to set up multiple 
 references to a new Person instance.
 
 .. code-block:: cpp
