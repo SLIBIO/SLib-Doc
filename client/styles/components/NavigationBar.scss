@@ -29,8 +29,8 @@ $darkGreen: #00765a;
   width: 100px;
   position: fixed;
   z-index: 10000;
+  letter-spacing: 1.5px;
   line-height: 50px;
-  transition: all .5s ease;
 }
 .nav_pinch {
   height: 50px;
@@ -74,6 +74,7 @@ $darkGreen: #00765a;
       text-align: center;
       padding: 0 7.5px;
       font-family: "Raleway-Medium";
+      letter-spacing: 1.5px;
       text-decoration: none;
       transition: all .5s ease
     }

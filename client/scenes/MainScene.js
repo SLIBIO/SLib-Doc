@@ -31,7 +31,7 @@ export default class App extends Component {
           />
           <div className={styles.descriptionContainer}>
             <div className={styles.header2}>
-              <span className={styles.label}>SLib</span>.io is a C++ cross-platform framework built for speed
+              <span className={styles.label}>SLib</span>.io is a C++ cross-platform framework built for speed.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
             <div className={styles.header1}>
               MAKE IT FASTER

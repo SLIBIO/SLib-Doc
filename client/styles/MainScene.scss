@@ -45,10 +45,12 @@ $darkGreen: #00765a;
     }
     .header2 {
       color: #FFF;
-      font-size: 25px;
+      font-size: 22px;
       text-align: center;
       line-height: 40px;
       color: $lightGreen;
+      letter-spacing: 2.5px;
+      font-family: Raleway-Light;
       .label {
         font-size: 35px;
         color: $yellow;
@@ -107,6 +109,11 @@ body {
 @font-face {
   font-family: Raleway-Bold;
   src: url('../assets/fonts/Raleway-Bold.ttf');
+}
+
+@font-face {
+  font-family: Raleway-Light;
+  src: url('../assets/fonts/Raleway-Light.ttf');
 }
 
 @font-face {
