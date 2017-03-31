@@ -41,7 +41,7 @@ export default class App extends Component {
             <div className={styles.gettingStarted}>
               <svg width='200px' height='40px' viewBox='0 0 200 37'>
                 <g strokeWidth='2' fill='none' fillRule='evenodd'>
-                  <polygon stroke='#FBAF3F' points='200 36 0 36 0 1 182 1' />
+                  <polygon stroke='#FBAF3F' points='199 36 1 36 1 1 182 1' />
                 </g>
               </svg>
               <div className={styles.label}>GETTING STARTED</div>
