@@ -25,7 +25,7 @@ export class Footer extends Component {
             { this.renderSocialIcon('fa-linkedin') }
           </div>
           <div className={styles.copyRight}>
-            Copyright © SLib.io 2017. All Rights Reserved
+            Copyright © SLIBIO 2017. All Rights Reserved
           </div>
         </div>
         <div className={styles.bar} />

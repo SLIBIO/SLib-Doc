@@ -4,7 +4,7 @@ $darkGreen: #00765a;
 
 .menuBorder {
   right: 100px;
-  width: 500px;
+  width: 700px;
   border-top: 50px solid rgba(238,238,230, 0.95);
   border-left: 40px solid transparent;
   position: fixed;
@@ -32,6 +32,7 @@ $darkGreen: #00765a;
   padding-left: 40px;
   text-align: center;
   color: WHITE;
+  font-size: 12px;
   width: 100px;
   position: fixed;
   z-index: 10000;
@@ -49,7 +50,7 @@ $darkGreen: #00765a;
 }
 .navigationBar {
   right: 100px;
-  width: 500px;
+  width: 700px;
   position: fixed;
   z-index: 10000;
   line-height: 50px;
@@ -72,6 +73,8 @@ $darkGreen: #00765a;
 
   li {
     float: left;
+    margin-left: 20px;
+    margin-right: 20px;
     a {
       display: block;
       color: $lightGreen;
@@ -96,7 +99,6 @@ $darkGreen: #00765a;
     width: 50%;
     list-style-type: none;
     margin: 0;
-    padding: 0 1em;
     overflow: hidden;
   }
   li {
