@@ -11,13 +11,6 @@ $darkGreen: #00765a;
   z-index: 10000;
   transition: all .5s ease;
 }
-
-@media screen and (max-width: 630px) {
-  .menuBorder {
-    border-top: 50px solid rgba(238,238,230, 0.95);
-    border-left: 0px solid transparent;
-  }
-}
 .contactBorder {
   right: 0px;
   width: 100px;
@@ -134,5 +127,20 @@ $darkGreen: #00765a;
   .logoName {
     float: right;
     margin-top: 5px;
+  }
+}
+
+
+
+@media screen and (max-width: 950px) {
+  .menuBorder {
+    left: 0;
+    width: inherit;
+    border-top: 50px solid rgba(238,238,230, 0.95);
+    border-left: 0px solid transparent;
+  }
+  .navigationBar {
+    left: 0;
+    width: inherit;
   }
 }
