@@ -19,20 +19,19 @@ $darkGray: #353534;
 
   .mainContainer {
     display: flex;
+    overflow: scroll;
     align-self: stretch;
     flex-direction: column;
     .topHeader {
       padding-top: 50px;
       padding-bottom: 40px;
-      background-color: $yellow;
-      border-bottom: 3px solid $lightGreen;
       .titleContainer {
         flex: 1;
         padding: 30px 20px 0px 20px;
         font-size: 30px;
         line-height: 40px;
         font-weight: 300;
-        color: $darkGray;
+        color: $lightGreen;
         text-align: center;
       }
       .titleDescription {
@@ -41,9 +40,9 @@ $darkGray: #353534;
         font-size: 20px;
         line-height: 30px;
         text-align: center;
-        color: $darkGray;
+        color: $lightGreen;
         .contactUs {
-          color: white;
+          color: $yellow;
           cursor: pointer;
         }
       }
@@ -52,8 +51,6 @@ $darkGray: #353534;
   .gridContainer {
     flex: 1;
     padding-top: 30px;
-    display: flex;
-    overflow: scroll;
 
     .showcaseItemContainer {
       width: 450px;
