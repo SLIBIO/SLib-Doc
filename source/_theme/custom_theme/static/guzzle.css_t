@@ -12,45 +12,100 @@ body {
   color: #333;
   line-height: 1.5;
 }
+@font-face {
+  font-family: Raleway-Medium;
+  src: url('./fonts/Raleway-Medium.ttf');
+}
+@font-face {
+  font-family: Raleway;
+  src: url('./fonts/Raleway-Regular.ttf');
+}
+
 .edit_github {
   float: right;
   margin-right: 35px;
 }
-.navigationBar {
-  flex: 1;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-  cursor: pointer;
-  display: flex;
+.contactBorder {
+  right: 0px;
+  width: 110px;
+  border-top: 50px solid #fcb64e;
+  border-left: 30px solid #353534;
+  position: fixed;
+  z-index: 10000;
+  transition: all .5s ease;
 }
-.navigationBar .imgLogo {
+.contactLabel {
+  right: 0px;
+  padding-left: 40px;
+  text-align: center;
+  color: WHITE;
+  font-size: 12px;
+  font-family: "Raleway";
+  width: 110px;
+  position: fixed;
+  z-index: 10000;
+  letter-spacing: 1.5px;
+  line-height: 50px;
+  border-bottom: 2px solid #fcb64e;
+}
+.navigationLogo {
+  flex: 1;
+  font-size: 30px;
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+}
+.navigationLogo .imgLogo {
   width: 40px;
 }
-.navigationBar .navigationLogo {
-  color: #2a6496;
-  font-size: 30px;
-  float: left;
+.navigationBar {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  left: 0px;
+  right: 110px;
+  z-index: 10000;
+  line-height: 50px;
+  background-color: #353534;
+  border-bottom: 2px solid #fcb64e;
+  transition: all .5s ease;
 }
-.navigationBar .navigationLogo .logoName {
-  float: right;
-  margin-top: 5px;
+.navMenu {
+  margin-right: 40px;
+  font-size: 1.25em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.navigationBar ul {
+.navMenu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   font-size: inherit;
-  line-height: inherit;
-  float: right;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all .5s ease;
-  color: #888;
+  line-height:inherit;
 }
-.navigationBar ul:hover {
-  color: #FFF;
+.navMenu li {
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.navMenu .highLighted a {
+  color: #eeeee6;
+}
+.navMenu li a {
+  display: block;
+  color: #fcb64e;
+  text-align: center;
+  padding: 0 7.5px;
+  font-family: "Raleway-Medium";
+  font-size: 17.5px;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: all .5s ease
+}
+.navMenu li a:hover {
+  color: #eeeee6;
 }
 #left-column {
   float: left;

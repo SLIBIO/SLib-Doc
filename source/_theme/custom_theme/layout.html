@@ -99,18 +99,21 @@
   {%- if pagename == 'index' and theme_index_template %}
     {% include theme_index_template %}
   {%- else %}
-  <div id="header-toggle">
     <div class="navigationBar">
       <div class="navigationLogo">
-        <img role='presentation' src="{{ pathto('./_images/logo.png', 1) }}" class="imgLogo" />
-        <div class="logoName">Lib</div>
+        <img role="presentation" src="{{ pathto('./_images/logo.png', 1) }}" class="imgLogo">
       </div>
-      <ul>
-        <li key={200}><a href='../'>Go to SLib.io</a></li>
-      </ul>
+      <div class="navMenu">
+        <ul>
+          <li class="highLighted"><a href="./Index.html">DOCUMENT</a></li>
+          <li><a href="../about">FAQ</a></li>
+          <li><a href="../showcase">About US</a></li>
+          <li><a href="../contact">REGISTER</a></li>
+        </ul>
+      </div>
     </div>
-    <a id="menu" href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
-  </div>
+    <div class="contactBorder"></div>
+    <div class="contactLabel">CONTACT</div>
     <div class="container-wrapper">
       {%- block sidebar1 %}{{ guzzle_sidebar() }}{% endblock %}
 
@@ -153,19 +156,23 @@
 
 {%- block footer %}
 <script type="text/javascript">
-  $("#header-toggle a").click(function () {
-    $("#left-column").toggle();
-    if ($("#left-column")[0].style.display === 'none') {
-      $("#right-column")[0].style.paddingTop = '60px';
-    } else {
-      $("#right-column")[0].style.paddingTop = '20px';
-    }
-  });
+//  $("#header-toggle a").click(function () {
+//    $("#left-column").toggle();
+//    if ($("#left-column")[0].style.display === 'none') {
+//      $("#right-column")[0].style.paddingTop = '60px';
+//    } else {
+//      $("#right-column")[0].style.paddingTop = '20px';
+//    }
+//  });
   window.addEventListener('scroll', function() {
     if (window.pageYOffset < 60) {
-      $("#header-toggle")[0].style.opacity = 0.95;
+      $(".navigationBar")[0].style.opacity = 0.95;
+      $(".contactBorder")[0].style.opacity = 1;
+      $(".contactLabel")[0].style.opacity = 1;
     } else {
-      $("#header-toggle")[0].style.opacity = 0.15;
+      $(".navigationBar")[0].style.opacity = 0.65;
+      $(".contactBorder")[0].style.opacity = 0.65;
+      $(".contactLabel")[0].style.opacity = 0.65;
     }
   });
 </script>

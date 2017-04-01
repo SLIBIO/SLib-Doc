@@ -10,10 +10,9 @@ export default class NavContainer extends Component {
     super(props);
     this.state = {
       windowWidth: window.innerWidth,
-      scrollPosition: window.scrollTop,
       windowPosition: window.pageYOffset,
       mobileNavVisible: false,
-      navClasses: styles.nav_container
+      navClasses: styles.navigationBar
     };
   }
 
@@ -39,16 +38,25 @@ export default class NavContainer extends Component {
   }
 
   handleResize = () => {
+    console.log('handleResize');
     this.setState({ windowWidth: window.innerWidth });
   };
 
   handleScroll = () => {
     this.setState({ windowPosition: window.pageYOffset });
-    this.setState({ scrollPosition: document.body.scrollTop });
     if (this.state.windowPosition >= 150) {
-      this.setState({ navClasses: `${styles.nav_container} ${styles.nav_pinch}` });
+      this.setState({ navClasses: `${styles.navigationBar} ${styles.nav_pinch}` });
     } else {
-      this.setState({ navClasses: styles.nav_container });
+      this.setState({ navClasses: styles.navigationBar });
+    }
+  };
+  handleScrollPosition = (position) => {
+    console.log('scroll');
+    this.setState({ windowPosition: position });
+    if (this.state.windowPosition >= 150) {
+      this.setState({ navClasses: `${styles.navigationBar} ${styles.nav_pinch}` });
+    } else {
+      this.setState({ navClasses: styles.navigationBar });
     }
   };
   handleNavClick() {
@@ -90,8 +98,7 @@ export default class NavContainer extends Component {
   render() {
     return (
       <div>
-        <div key={103} className={styles.menuBorder} />
-        <div key={200} className={styles.navigationBar}>
+        <div key={200} className={this.state.navClasses}>
           <div key={300} className={styles.navigationLogo}>
             <img role='presentation' src={`${SlibIcon}`} className={styles.imgLogo} />
           </div>

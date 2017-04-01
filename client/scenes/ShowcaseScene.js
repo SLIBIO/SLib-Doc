@@ -26,6 +26,17 @@ const showcaseItems = [{
 }];
 
 export default class ShowcaseScene extends Component {
+  constructor(props) {
+    super(props);
+    this.navigationRef = null;
+  }
+  onPaneDidMounted = (ref) => {
+    if (ref) {
+      ref.addEventListener('scroll', () => {
+        this.navigationRef.handleScrollPosition(ref.scrollTop);
+      });
+    }
+  };
   renderShowcaseItems() {
     const ret = [];
     showcaseItems.forEach((item, index) => {
@@ -46,8 +57,8 @@ export default class ShowcaseScene extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <NavigationBar />
-        <div className={styles.mainContainer}>
+        <NavigationBar ref={ref => this.navigationRef = ref } />
+        <div className={styles.mainContainer} ref={this.onPaneDidMounted}>
           <div className={styles.topHeader}>
             <div className={styles.titleContainer}>
               We’re proud to feature amazing apps built with SLib!

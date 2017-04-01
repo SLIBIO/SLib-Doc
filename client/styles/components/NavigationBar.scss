@@ -1,21 +1,15 @@
 $yellow: #fcb64e;
 $lightGreen: #00a79d;
 $darkGreen: #00765a;
+$offWhite: #eeeee6;
+$darkGray: #353534;
 
-.menuBorder {
-  right: 100px;
-  width: 700px;
-  border-top: 50px solid rgba(238,238,230, 0.95);
-  border-left: 40px solid transparent;
-  position: fixed;
-  z-index: 10000;
-  transition: all .5s ease;
-}
+$contactWidth: 110px;
 .contactBorder {
   right: 0px;
-  width: 100px;
+  width: $contactWidth;
   border-top: 50px solid $yellow;
-  border-left: 40px solid transparent;
+  border-left: 30px solid transparent;
   position: fixed;
   z-index: 10000;
   transition: all .5s ease;
@@ -26,31 +20,41 @@ $darkGreen: #00765a;
   text-align: center;
   color: WHITE;
   font-size: 12px;
-  width: 100px;
+  width: $contactWidth;
   position: fixed;
   z-index: 10000;
   letter-spacing: 1.5px;
   line-height: 50px;
+  border-bottom: 2px solid $yellow;
+}
+
+.navigationLogo {
+  flex: 1;
+  font-size: 30px;
+  margin-left: 100px;
+  .imgLogo {
+    width: 40px;
+  }
+}
+.navigationBar {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  left: 0px;
+  right: $contactWidth;
+  z-index: 10000;
+  line-height: 50px;
+  background-color: $darkGray;
+  border-bottom: 2px solid $yellow;
+  transition: all .5s ease;
 }
 .nav_pinch {
   height: 50px;
   line-height: 50px;
   opacity: .65;
-  background-color: #1b1c27;
-}
-.imgLogo {
-  width: 40px;
-}
-.navigationBar {
-  right: 100px;
-  width: 700px;
-  position: fixed;
-  z-index: 10000;
-  line-height: 50px;
-  font-family: Work Sans,Open Sans,sans-serif;
-  transition: all .5s ease;
 }
 .navMenu {
+  margin-right: 40px;
   font-size: 1.25em;
   display: flex;
   align-items: center;
@@ -70,7 +74,7 @@ $darkGreen: #00765a;
     margin-right: 20px;
     a {
       display: block;
-      color: $lightGreen;
+      color: $yellow;
       text-align: center;
       padding: 0 7.5px;
       font-family: "Raleway-Medium";
@@ -79,7 +83,7 @@ $darkGreen: #00765a;
       transition: all .5s ease
     }
     a:hover {
-      color: $darkGreen;
+      color: $offWhite;
     }
   }
 }
@@ -118,16 +122,6 @@ $darkGreen: #00765a;
   }
   p:hover {
     color: #f44336
-  }
-}
-
-.navigationLogo {
-  margin-left: 30px;
-  font-size: 30px;
-  float: left;
-  .logoName {
-    float: right;
-    margin-top: 5px;
   }
 }
 
