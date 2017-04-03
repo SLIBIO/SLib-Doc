@@ -118,7 +118,7 @@ body {
 }
 
 #right-column {
-  padding: 60px 0;
+  padding: 50px 0;
   margin-left: 300px;
   background-color: #fff;
 }
@@ -1044,7 +1044,7 @@ span.eqno {
   #right-column {
     margin-left: 0;
     margin-top: 0;
-    padding: 60px 20px 8px 20px;
+    padding: 50px 20px 8px 20px;
     width: 100%;
     float: none;
   }
