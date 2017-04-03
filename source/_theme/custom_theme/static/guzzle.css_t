@@ -336,7 +336,7 @@ div.sphinxsidebar .sidebar-toc a {
 }
 
 .sidebar-toc ul li a:hover {
-  background-color: #00A79D;
+  background-color: #00765a;
   color: #fff;
 }
 
@@ -345,7 +345,9 @@ div.sphinxsidebar .sidebar-toc a {
   background-color: #00A79D;
   color: #444;
 }
-
+.toctree-wrapper a {
+  color: #00A79D;
+}
 .sidebar-toc ul li.toctree-l1 a {
   padding: 5px 25px;
 }
