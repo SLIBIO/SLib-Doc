@@ -27,7 +27,7 @@ body {
 }
 .contactBorder {
   right: 0px;
-  width: 110px;
+  width: 140px;
   border-top: 50px solid #fcb64e;
   border-left: 30px solid #353534;
   position: fixed;
@@ -36,12 +36,12 @@ body {
 }
 .contactLabel {
   right: 0px;
-  padding-left: 40px;
+  padding-left: 30px;
   text-align: center;
   color: WHITE;
   font-size: 12px;
   font-family: "Raleway";
-  width: 110px;
+  width: 140px;
   position: fixed;
   z-index: 10000;
   letter-spacing: 1.5px;
