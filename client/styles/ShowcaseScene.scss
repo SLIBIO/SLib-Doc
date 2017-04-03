@@ -53,27 +53,29 @@ $darkGray: #353534;
     padding-top: 30px;
 
     .showcaseItemContainer {
-      width: 450px;
-      height: 350px;
-      margin-left: 30px;
-      margin-right: 30px;
+      width: 550px;
+      height: 380px;
+      padding: 5px;
+
       .title {
         color: #FFF;
         background-color: #FFF;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: 50% 50%;
       }
+      margin-left: 50px;
+      margin-right: 50px;
     }
     .item1 {
       margin-top: 100px;
     }
   }
-
   :global {
     .mdl-grid {
-      max-width: 1200px;
+      max-width: 1400px;
       justify-content:center;
     }
   }
 }
+

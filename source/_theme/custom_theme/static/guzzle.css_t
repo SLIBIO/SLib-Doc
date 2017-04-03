@@ -114,7 +114,7 @@ body {
   border-right: 1px solid #e0e0e0;
   width: 300px;
   overflow: auto;
-  background: #fafafa;
+  background: #F7F4EB;
 }
 
 #right-column {
@@ -152,17 +152,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3 {
-  margin-top: 30px;
+  margin-top: 0px;
   margin-bottom: 20px;
 }
 
 h1 {
   font-size: 38px;
   padding: 10px 10px 10px 45px;
-  margin: 20px 0 35px -45px;
-  background-color: aliceblue;
+  margin: 0px 0 35px -45px;
+  background-color: #F7F4EB;
   width: calc(100% + 90px);
-  border-bottom: 1px solid #D8E4EF;
+  color: #00A79D;
+  border-bottom: 1px solid #F7F4EB;
 }
 
 h2 {
@@ -255,10 +256,15 @@ dl.method {
 
 .breadcrumb {
   font-size: 15px;
-  margin-bottom: 12px;
-  background: #fff;
+  margin-bottom: 0px;
+  background: #343534;
 }
-
+.breadcrumb a {
+  color: #FCB64D;
+}
+.breadcrumb li {
+  color: WHITE;
+}
 blockquote {
   border-width: .1em 0 .1em 0;
   border-color: #e5eef2;
@@ -330,13 +336,13 @@ div.sphinxsidebar .sidebar-toc a {
 }
 
 .sidebar-toc ul li a:hover {
-  background-color: #428bca;
+  background-color: #00A79D;
   color: #fff;
 }
 
 .sidebar-toc ul li.current > a,
 .sidebar-toc ul li.current > a:hover {
-  background-color: #e6e6e6;
+  background-color: #00A79D;
   color: #444;
 }
 
@@ -436,6 +442,12 @@ div.sphinxsidebar input {
   border-radius: 5px;
   margin: 0;
   font-size: 15px;
+  background-color: #F7F4EB;
+  color: #00A79D;
+  padding-left: 10px;
+}
+#main-search form .input-group input:placeholder {
+  color: #00A79D;
 }
 
 .search-page-form {
@@ -783,7 +795,7 @@ div.seealso {
 }
 
 div.admonition tt.xref, div.admonition a tt {
-  border-bottom: 1px solid #fafafa;
+  border-bottom: 1px solid #fafafa;\
 }
 
 div.admonition p.last {
