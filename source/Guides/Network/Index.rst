@@ -5,5 +5,5 @@ Network
 
 .. toctree::
 
-   URLRequest/Index
+   URLRequests/Index
    Socket/Index
