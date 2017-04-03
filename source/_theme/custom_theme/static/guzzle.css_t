@@ -340,8 +340,8 @@ div.sphinxsidebar .sidebar-toc a {
   color: #fff;
 }
 
-.sidebar-toc ul li.current > a,
-.sidebar-toc ul li.current > a:hover {
+.current.reference.internal,
+.current.reference.internal {
   background-color: #00A79D;
   color: #444;
 }
