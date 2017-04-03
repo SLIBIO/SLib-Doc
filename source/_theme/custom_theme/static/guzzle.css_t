@@ -63,7 +63,7 @@ body {
   flex-direction: row;
   position: fixed;
   left: 0px;
-  right: 110px;
+  right: 140px;
   z-index: 10000;
   line-height: 50px;
   background-color: #353534;
