@@ -67,7 +67,7 @@ XML attributes
 
 **text**
 
-Sets the text of this EditView. May be a string value, such as "@string/button_text" or "Hello World!"
+Sets the text of this EditView. May be a string value, such as "@string/text" or "Hello World!"
 
 **gravity**
 
@@ -89,13 +89,26 @@ top|center     You can combine multiple values of the above constants.
 
 Specifies the text to be displayed when the text of this EditView is empty. May be a string value, such as "@string/button_text" or "Hello World!"
 
+**hintTextColor**
+
+Specifies the color of the hint text.
+
 **readOnly**
 
 If true, this EditView has not an input method. May be a boolean value, such as "true" or "false".
 
-**multiline**
+**multiLine**
 
-If true, this EditView allows multiline text. May be a boolean value, such as "true" or "false".
+Specifies what happens when a line is too long for the EditView's size. Must be one of the following constant values.
+
+============== =================================================================================================================================
+Constant       Description
+============== =================================================================================================================================
+single         Shows text in single line.
+multiple       Break text only at CR/LF
+word-wrap      Break words only at allowed break points.
+break-word     Allows unbreakable words to be broken.
+============== =================================================================================================================================
 
 **textColor**
 

@@ -9,3 +9,4 @@ UI Components
    CheckBox/Index
    EditView/Index
    ImageView/Index
+   LabelView/Index
