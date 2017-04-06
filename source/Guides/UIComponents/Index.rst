@@ -10,3 +10,4 @@ UI Components
    EditView/Index
    ImageView/Index
    LabelView/Index
+   ListView/Index
