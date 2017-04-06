@@ -8,3 +8,4 @@ UI Components
    Button/Index
    CheckBox/Index
    EditView/Index
+   ImageView/Index
