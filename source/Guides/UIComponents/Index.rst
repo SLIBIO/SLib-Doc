@@ -11,3 +11,5 @@ UI Components
    ImageView/Index
    LabelView/Index
    ListView/Index
+   SelectView/Index
+   PickerView/Index
