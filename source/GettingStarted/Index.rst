@@ -20,7 +20,9 @@ Clone the repository from Github
 ========================================
 
 ::
+
     git clone https://github.com/SLIBIO/SLib.git
+
 
 Build the static libraries
 ==========================================
@@ -48,12 +50,16 @@ Setup Environment
 On macOS and Linux, run the ``setup-path`` script using Terminal or Finder.
 
 ::
+
   ./setup-path
+
 
 On Windows, run the ``setup-path.bat`` batch file using Command Prompt or File Explorer.
 
 ::
+
   setup-path.bat
+
 
 ``setup-path`` will register current source directory as ``SLIB_PATH`` environment variable on the Operating System, XCode, and KDevelop.
 
@@ -96,6 +102,7 @@ Firstly, open and build the project in the ``build/AndroidStudio`` directory in 
 Edit the ``build.gradle`` in your app module as following.
 
 ::
+
   ...
   android {
     ...
@@ -129,6 +136,7 @@ Edit the ``build.gradle`` in your app module as following.
 Edit ``CMakeLists.txt`` in your app module as following.
 
 ::
+
   ...
   include_directories (${SLIB_PATH}/include)
   link_directories (${SLIB_PATH}/lib/Android/${CMAKE_BUILD_TYPE}-${ANDROID_ABI})
@@ -274,6 +282,7 @@ Firstly, open and build ``SLib.kdev4`` project in the ``build/Linux-KDevelop`` d
 Edit ``CMakeLists.txt`` as following
     
 ::
+
     ...
     set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
     
