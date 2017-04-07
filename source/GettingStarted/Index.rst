@@ -207,7 +207,7 @@ Firstly, open and build the project in the ``build/TizenStudio`` directory in th
         
      * In the ``Add directory path`` dialog, input the following path under the ``Directory:`` and click on ``OK`` button.
         
-      ``${SLIB_PATH}/include``
+       ``${SLIB_PATH}/include``
         
    * Select ``Library Paths`` tab on the property page
     
