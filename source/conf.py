@@ -17,7 +17,7 @@ source_suffix = '.rst'
 master_doc = 'Index'
 
 project = u'SLib.io Documentation'
-copyright = u' 2017 SLib.io. All rights reversed'
+copyright = u' 2017 SLIBIO. All rights reversed'
 
 
 version = ''
