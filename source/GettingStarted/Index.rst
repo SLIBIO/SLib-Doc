@@ -201,11 +201,11 @@ Firstly, open and build the project in the ``build/TizenStudio`` directory in th
 
    * Select ``Includes`` tab on the property page
     
-    * Select ``GNU C++`` in ``Languages`` list on the left side of the property page.
+     * Select ``GNU C++`` in ``Languages`` list on the left side of the property page.
         
-    * Click on the ``Add`` button on the right side of the property page.
+     * Click on the ``Add`` button on the right side of the property page.
         
-    * In the ``Add directory path`` dialog, input the following path under the ``Directory:`` and click on ``OK`` button.
+     * In the ``Add directory path`` dialog, input the following path under the ``Directory:`` and click on ``OK`` button.
         
       ``${SLIB_PATH}/include``
         
