@@ -41,8 +41,8 @@ Win32-VC       Visual Studio solution for Win32
 TizenStudio    Tizen Studio project for Tizen
 Linux-KDevelop KDevelop project for Linux
 ============== =====================================================================================================
- 
- After compiling the projects, you can find the static libraries in the ``lib`` directory in the source tree.
+
+After compiling the projects, you can find the static libraries in the ``lib`` directory in the source tree.
 
 Setup Environment
 ==========================
@@ -163,25 +163,25 @@ Firstly, open and build the project in the ``build/iOS-Xcode`` (or ``build/macOS
 
 3. Find ``Search Paths`` section
 
-    * Add following path to ``Header Search Paths``
+ * Add following path to ``Header Search Paths``
+ 
+   ``$(SLIB_PATH)/include``
 
-        ``$(SLIB_PATH)/include``
-
-    * Add following path to ``Library Search Paths``
-
-        on iOS
-
-        ``$(SLIB_PATH)/lib/iOS/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)``
-
-        on macOS
-
-        ``$(SLIB_PATH)/lib/macOS/$(CONFIGURATION)``
+ * Add following path to ``Library Search Paths``
+ 
+   on iOS
+   
+   ``$(SLIB_PATH)/lib/iOS/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)``
+   
+   on macOS
+   
+   ``$(SLIB_PATH)/lib/macOS/$(CONFIGURATION)``
 
 4. Find ``Linking`` section
 
-    Add following linker flag to ``Other Linker Flags``
-
-    ``-lslib``
+   Add following linker flag to ``Other Linker Flags``
+  
+   ``-lslib``
 
 
 Tizen Studio
