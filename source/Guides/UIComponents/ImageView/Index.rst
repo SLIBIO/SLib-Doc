@@ -82,4 +82,4 @@ stretch        Scale the image to fit the size of this ImageView by changing the
 
 **src**
 
-Specifies the drawable.
+Specifies the drawable. May be a drawable.
