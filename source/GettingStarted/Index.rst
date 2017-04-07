@@ -163,24 +163,24 @@ Firstly, open and build the project in the ``build/iOS-Xcode`` (or ``build/macOS
 
 3. Find ``Search Paths`` section
 
- * Add following path to ``Header Search Paths``
+   * Add following path to ``Header Search Paths``
  
-   ``$(SLIB_PATH)/include``
-
- * Add following path to ``Library Search Paths``
+     ``$(SLIB_PATH)/include``
+   
+   * Add following path to ``Library Search Paths``
  
-   on iOS
-   
-   ``$(SLIB_PATH)/lib/iOS/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)``
-   
-   on macOS
-   
-   ``$(SLIB_PATH)/lib/macOS/$(CONFIGURATION)``
+     on iOS
+  
+     ``$(SLIB_PATH)/lib/iOS/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)``
+  
+     on macOS
+  
+     ``$(SLIB_PATH)/lib/macOS/$(CONFIGURATION)``
 
 4. Find ``Linking`` section
 
-   Add following linker flag to ``Other Linker Flags``
-  
+   Add following linker flag to ``Other Linker Flags``  
+
    ``-lslib``
 
 
@@ -192,54 +192,54 @@ Firstly, open and build the project in the ``build/TizenStudio`` directory in th
 1. Right click on the project in the ``Project Explorer``
 
 2. Click on ``Properties`` on the popup menu.
-
-    Then, ``Properties`` popup window will be shown.
+   
+   Then, ``Properties`` popup window will be shown.
 
 3. Find ``C/C++ General`` in the left tree and then open it
 
-    Select the subitem: ``Paths and Symbols``. Then, ``Paths and Symbols`` property page will be shown on the right side.
+   Select the subitem: ``Paths and Symbols``. Then, ``Paths and Symbols`` property page will be shown on the right side.
 
-    * Select ``Includes`` tab on the property page
+   * Select ``Includes`` tab on the property page
     
-        * Select ``GNU C++`` in ``Languages`` list on the left side of the property page.
+    * Select ``GNU C++`` in ``Languages`` list on the left side of the property page.
         
-        * Click on the ``Add`` button on the right side of the property page.
+    * Click on the ``Add`` button on the right side of the property page.
         
-        * In the ``Add directory path`` dialog, input the following path under the ``Directory:`` and click on ``OK`` button.
+    * In the ``Add directory path`` dialog, input the following path under the ``Directory:`` and click on ``OK`` button.
         
-            ``${SLIB_PATH}/include``
+      ``${SLIB_PATH}/include``
         
-    * Select ``Library Paths`` tab on the property page
+   * Select ``Library Paths`` tab on the property page
     
-        * Click on the ``Add...`` button on the right side of the property page.
+     * Click on the ``Add...`` button on the right side of the property page.
         
-        * In the ``Add...`` dialog, input the following path under the ``Directory:`` and click on ``OK`` button.
+     * In the ``Add...`` dialog, input the following path under the ``Directory:`` and click on ``OK`` button.
         
-            ``${SLIB_PATH}/lib/Tizen/${ConfigName}-${SDK_ARCH}``
+       ``${SLIB_PATH}/lib/Tizen/${ConfigName}-${SDK_ARCH}``
 
-    * Select ``Libraries`` tab on the property page
+   * Select ``Libraries`` tab on the property page
     
-        * Click on the ``Add...`` button on the right side of the property page.
+     * Click on the ``Add...`` button on the right side of the property page.
         
-        * In the ``Add...`` dialog, input the following name under the ``File:`` and click on ``OK`` button.
+     * In the ``Add...`` dialog, input the following name under the ``File:`` and click on ``OK`` button.
         
-            ``slib``
+       ``slib``
 
 4. Find ``C/C++ Build`` in the left tree and then open it
 
-    Select the subitem: ``Settings``. Then, ``Settings`` property page will be shown on the right side.
+   Select the subitem: ``Settings``. Then, ``Settings`` property page will be shown on the right side.
     
-    * Select ``Tool Settings`` tab in the property page
+   * Select ``Tool Settings`` tab in the property page
     
-    * Select ``C++ Compiler`` in the tree under the tab button
+   * Select ``C++ Compiler`` in the tree under the tab button
     
-    * Select the subitem: ``Dialect``
+   * Select the subitem: ``Dialect``
     
-    * On the right side, select one of the following options for ``Language standard`` item.
+   * On the right side, select one of the following options for ``Language standard`` item.
     
-        ``ISO C++11 (-std=c++0x)``
+     ``ISO C++11 (-std=c++0x)``
         
-        ``ISO C++1y (-std=c++1y)``
+     ``ISO C++1y (-std=c++1y)``
 
 
 Visual Studio
@@ -251,27 +251,27 @@ Firstly, open and build ``SLib.sln`` solution in the ``build/Win32-VC`` director
 
 2. Click on ``Properties`` on the popup menu.
     
-    Then, ``... Property Pages`` dialog will be shown.
+   Then, ``... Property Pages`` dialog will be shown.
 
 3. Select ``VC++ Directories`` under the ``Configuration Properties`` in the left tree.
 
-    On the right side,
+   On the right side,
     
-    * Add following path to the ``Include Directories`` option
+   * Add following path to the ``Include Directories`` option
     
-        ``$(SLIB_PATH)/include``
+     ``$(SLIB_PATH)/include``
         
-    * Add following path to the ``Library Directories`` option
+   * Add following path to the ``Library Directories`` option
     
-        ``$(SLIB_PATH)/lib/Win32/$(Configuration)-$(Platform)``
+     ``$(SLIB_PATH)/lib/Win32/$(Configuration)-$(Platform)``
 
 4. Select ``Linker`` under the ``Configuration Properties`` in the left tree.
 
-    * Select subitem: ``Input``
+   * Select subitem: ``Input``
 
-    * On the right side, add following file to the ``Additional Dependencies``
+   * On the right side, add following file to the ``Additional Dependencies``
     
-        ``slib.lib``
+     ``slib.lib``
 
 
 KDevelop or CMake
