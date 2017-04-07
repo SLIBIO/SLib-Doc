@@ -62,7 +62,7 @@ You can respond to key event in three ways.
 
    myEdit->setOnClick(SLIB_FUNCTION_WEAKREF(MyScreen, onKeyPressEvent, this));
 
-XML attributes
+XML Attributes
 ==================
 
 **text**

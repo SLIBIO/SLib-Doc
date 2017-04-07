@@ -68,7 +68,7 @@ The followings show how you can respond when taps a checkbox which is defined in
 
    chkButton->setOnClick(SLIB_FUNCTION_WEAKREF(MyScreen, onClickButton, this));
 
-XML attributes
+XML Attributes
 ==================
 
 **checked**

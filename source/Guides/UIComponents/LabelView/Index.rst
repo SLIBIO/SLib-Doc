@@ -34,7 +34,7 @@ To create a Label programmatically, you can use code like the following:
    label->setSizeWrapping();
    addChild(label);
 
-XML attributes
+XML Attributes
 =================
 
 **gravity**

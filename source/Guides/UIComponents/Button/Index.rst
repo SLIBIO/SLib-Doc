@@ -68,7 +68,7 @@ The followings show how you can respond when taps a button which is defined in t
 
    iconButton->setOnClick(SLIB_FUNCTION_WEAKREF(MyScreen, onClickButton, this));
 
-XML attributes
+XML Attributes
 ==================
 
 **text**

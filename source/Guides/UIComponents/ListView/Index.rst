@@ -96,7 +96,7 @@ The adapter is assigned to the ListView via the setAdapter() method.
    Ref<MyListAdapter> adapter = new MyListAdapter;
    list->setAdapter(adapter);
 
-XML attributes
+XML Attributes
 =================
 
 **item**

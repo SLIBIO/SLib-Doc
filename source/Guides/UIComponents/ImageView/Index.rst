@@ -48,7 +48,7 @@ To load image from file on your drive use:
    imageView->setSource(image);
 
 
-XML attributes
+XML Attributes
 =================
 
 **gravity**
