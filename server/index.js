@@ -14,6 +14,22 @@ require('babel-polyfill');
 if (config.env === 'development') {
   const server = new WebpackDevServer(webpack(webpackConfig), {
     contentBase: '/build/',
+    stats: {
+      colors: true,
+      hash: false,
+      version: false,
+      timings: false,
+      assets: false,
+      chunks: false,
+      modules: false,
+      reasons: false,
+      children: false,
+      source: false,
+      errors: false,
+      errorDetails: false,
+      warnings: false,
+      publicPath: false
+    },
     hot: true,
     historyApiFallback: true,
   });

@@ -1,42 +1,70 @@
-.container {
-  z-index: 1000;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  background-color: rgba(15, 20, 38, 0.8);
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  .copyRight {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #999
-  }
-  .socialContainer {
-    display: flex;
-    flex-direction:row;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    .iconContainer {
-      margin-left:20px;
-    }
+$yellow: #fcb64e;
+$lightGreen: #00a79d;
+$darkGreen: #00765a;
+$offWhite: #eeeee6;
 
-    span {
-      font-size: 25px;
+.container {
+  position: relative;
+  height: 200px;
+  z-index: 1000;
+  background-color: $offWhite;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  .bar {
+    height: 30px;
+    background-color: $lightGreen;
+  }
+  .background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 200px;
+    width: 512px;
+    background-image: url('../../assets/footer_background.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .leftContainer {
+    margin-left: 30px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    .copyRight {
+      font-size: 15px;
+      line-height: 36px;
+      margin-left: 30px;
+      font-family: Raleway;
+      color: $lightGreen;
     }
-    .fa-twitter span{
-      color: #55acee;
+    .socialContainer {
+      display: flex;
+      flex-direction:row;
+      .iconContainer {
+        margin-left: 10px;
+      }
+
+      span {
+        font-size: 18px;
+      }
+      .fa-twitter span{
+        color: $lightGreen;
+      }
+      .fa-facebook span{
+        color: $lightGreen;
+      }
+      .fa-github span{
+        color: $lightGreen;
+      }
+      .fa-linkedin span {
+        color: $lightGreen;
+      }
     }
-    .fa-facebook span{
-      color: #3b5998;
-    }
-    .fa-github span{
-      //color: #333;
-    }
-    .fa-linkedin span {
-      color: #0077B5;
-    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .background {
+    display: none;
   }
 }

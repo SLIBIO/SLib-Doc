@@ -1,52 +1,81 @@
+$yellow: #fcb64e;
+$lightGreen: #00a79d;
+$darkGreen: #00765a;
+$darkGray: #353534;
+
 .container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   align-self: stretch;
   align-items: center;
+  background-image: url('../assets/showcase_background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
   .mainContainer {
-    max-width: 1000px;
-    margin-top: 80px;
     display: flex;
+    overflow: scroll;
+    align-self: stretch;
     flex-direction: column;
-    .titleContainer {
-      flex: 1;
-      padding: 30px 20px 0px 20px;
-      font-size: 30px;
-      line-height: 40px;
-      font-weight: 300;
-      color: #555;
-      text-align: center;
-    }
-    .titleDescription {
-      flex: 1;
-      padding: 30px 20px 0px 20px;
-      font-size: 20px;
-      line-height: 30px;
-      text-align: center;
-      color: #555;
-      .contactUs {
-        color: #0e84b5;
-        cursor: pointer;
+    .topHeader {
+      padding-top: 50px;
+      padding-bottom: 40px;
+      .titleContainer {
+        flex: 1;
+        padding: 30px 20px 0px 20px;
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 300;
+        color: $lightGreen;
+        text-align: center;
+      }
+      .titleDescription {
+        flex: 1;
+        padding: 30px 20px 0px 20px;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+        color: $lightGreen;
+        .contactUs {
+          color: $yellow;
+          cursor: pointer;
+        }
       }
     }
   }
+  .gridContainer {
+    flex: 1;
+    padding-top: 30px;
 
-  .showcaseItemContainer {
-    width: 450px;
-    height: 350px;
-    margin: 10px;
-    .title {
-      color: #FFF;
-      background-color: #FFF;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
+    .showcaseItemContainer {
+      width: 550px;
+      height: 380px;
+      padding: 5px;
+
+      .title {
+        color: #FFF;
+        background-color: #FFF;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+      }
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+    .item1 {
+      margin-top: 100px;
     }
   }
-
   :global {
     .mdl-grid {
+      max-width: 1400px;
       justify-content:center;
     }
   }
 }
+

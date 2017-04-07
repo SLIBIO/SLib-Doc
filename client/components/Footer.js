@@ -17,15 +17,19 @@ export class Footer extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <div className={styles.socialContainer}>
-          { this.renderSocialIcon('fa-twitter') }
-          { this.renderSocialIcon('fa-facebook') }
-          { this.renderSocialIcon('fa-github') }
-          { this.renderSocialIcon('fa-linkedin') }
+        <div className={styles.leftContainer}>
+          <div className={styles.socialContainer}>
+            { this.renderSocialIcon('fa-twitter') }
+            { this.renderSocialIcon('fa-facebook') }
+            { this.renderSocialIcon('fa-github') }
+            { this.renderSocialIcon('fa-linkedin') }
+          </div>
+          <div className={styles.copyRight}>
+            Copyright © SLIBIO 2017. All Rights Reserved
+          </div>
         </div>
-        <div className={styles.copyRight}>
-          Copyright © SLib.io 2017. All Rights Reserved
-        </div>
+        <div className={styles.bar} />
+        <div className={styles.background} />
       </div>
     );
   }

@@ -12,45 +12,100 @@ body {
   color: #333;
   line-height: 1.5;
 }
+@font-face {
+  font-family: Raleway-Medium;
+  src: url('./fonts/Raleway-Medium.ttf');
+}
+@font-face {
+  font-family: Raleway;
+  src: url('./fonts/Raleway-Regular.ttf');
+}
+
 .edit_github {
   float: right;
   margin-right: 35px;
 }
-.navigationBar {
-  flex: 1;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-  cursor: pointer;
-  display: flex;
+.contactBorder {
+  right: 0px;
+  width: 140px;
+  border-top: 50px solid #fcb64e;
+  border-left: 30px solid #353534;
+  position: fixed;
+  z-index: 10000;
+  transition: all .5s ease;
 }
-.navigationBar .imgLogo {
+.contactLabel {
+  right: 0px;
+  padding-left: 30px;
+  text-align: center;
+  color: WHITE;
+  font-size: 12px;
+  font-family: "Raleway";
+  width: 140px;
+  position: fixed;
+  z-index: 10000;
+  letter-spacing: 1.5px;
+  line-height: 50px;
+  border-bottom: 2px solid #fcb64e;
+}
+.navigationLogo {
+  flex: 1;
+  font-size: 30px;
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+}
+.navigationLogo .imgLogo {
   width: 40px;
 }
-.navigationBar .navigationLogo {
-  color: #2a6496;
-  font-size: 30px;
-  float: left;
+.navigationBar {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  left: 0px;
+  right: 140px;
+  z-index: 10000;
+  line-height: 50px;
+  background-color: #353534;
+  border-bottom: 2px solid #fcb64e;
+  transition: all .5s ease;
 }
-.navigationBar .navigationLogo .logoName {
-  float: right;
-  margin-top: 5px;
+.navMenu {
+  margin-right: 40px;
+  font-size: 1.25em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.navigationBar ul {
+.navMenu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   font-size: inherit;
-  line-height: inherit;
-  float: right;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all .5s ease;
-  color: #888;
+  line-height:inherit;
 }
-.navigationBar ul:hover {
-  color: #FFF;
+.navMenu li {
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.navMenu .highLighted a {
+  color: #eeeee6;
+}
+.navMenu li a {
+  display: block;
+  color: #fcb64e;
+  text-align: center;
+  padding: 0 7.5px;
+  font-family: "Raleway-Medium";
+  font-size: 17.5px;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: all .5s ease
+}
+.navMenu li a:hover {
+  color: #eeeee6;
 }
 #left-column {
   float: left;
@@ -59,11 +114,11 @@ body {
   border-right: 1px solid #e0e0e0;
   width: 300px;
   overflow: auto;
-  background: #fafafa;
+  background: #F7F4EB;
 }
 
 #right-column {
-  padding: 60px 0;
+  padding: 50px 0;
   margin-left: 300px;
   background-color: #fff;
 }
@@ -97,17 +152,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3 {
-  margin-top: 30px;
+  margin-top: 0px;
   margin-bottom: 20px;
 }
 
 h1 {
   font-size: 38px;
   padding: 10px 10px 10px 45px;
-  margin: 20px 0 35px -45px;
-  background-color: aliceblue;
+  margin: 0px 0 35px -45px;
+  background-color: #F7F4EB;
   width: calc(100% + 90px);
-  border-bottom: 1px solid #D8E4EF;
+  color: #00A79D;
+  border-bottom: 1px solid #F7F4EB;
 }
 
 h2 {
@@ -200,10 +256,15 @@ dl.method {
 
 .breadcrumb {
   font-size: 15px;
-  margin-bottom: 12px;
-  background: #fff;
+  margin-bottom: 0px;
+  background: #343534;
 }
-
+.breadcrumb a {
+  color: #FCB64D;
+}
+.breadcrumb li {
+  color: WHITE;
+}
 blockquote {
   border-width: .1em 0 .1em 0;
   border-color: #e5eef2;
@@ -275,16 +336,18 @@ div.sphinxsidebar .sidebar-toc a {
 }
 
 .sidebar-toc ul li a:hover {
-  background-color: #428bca;
+  background-color: #00765a;
   color: #fff;
 }
 
-.sidebar-toc ul li.current > a,
-.sidebar-toc ul li.current > a:hover {
-  background-color: #e6e6e6;
+.current.reference.internal,
+.current.reference.internal {
+  background-color: #00A79D;
   color: #444;
 }
-
+.toctree-wrapper a {
+  color: #00A79D;
+}
 .sidebar-toc ul li.toctree-l1 a {
   padding: 5px 25px;
 }
@@ -381,6 +444,12 @@ div.sphinxsidebar input {
   border-radius: 5px;
   margin: 0;
   font-size: 15px;
+  background-color: #F7F4EB;
+  color: #00A79D;
+  padding-left: 10px;
+}
+#main-search form .input-group input:placeholder {
+  color: #00A79D;
 }
 
 .search-page-form {
@@ -728,7 +797,7 @@ div.seealso {
 }
 
 div.admonition tt.xref, div.admonition a tt {
-  border-bottom: 1px solid #fafafa;
+  border-bottom: 1px solid #fafafa;\
 }
 
 div.admonition p.last {
@@ -977,7 +1046,7 @@ span.eqno {
   #right-column {
     margin-left: 0;
     margin-top: 0;
-    padding: 60px 20px 8px 20px;
+    padding: 50px 20px 8px 20px;
     width: 100%;
     float: none;
   }

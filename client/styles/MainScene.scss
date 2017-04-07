@@ -1,9 +1,15 @@
+$yellow: #fcb64e;
+$lightGreen: #00a79d;
+$darkGreen: #00765a;
+
 .container {
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
-  bottom: 0;
+  min-height: 300px;
+  min-width: 630px;
+  bottom: 200px;
   :global {
     .image-gallery {
       height: 100%;
@@ -16,7 +22,7 @@
       .galleryImage {
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: 50% 50%;
+        background-position: 0% 50%;
       }
     }
   }
@@ -24,24 +30,93 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 70px;
+    right: 70px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     z-index: 1000;
     flex-direction: column;
     .header1 {
-      color: #FFF;
-      font-size: 4rem;
+      color: $lightGreen;
+      font-size: 45px;
+      line-height: 90px;
+      font-family: Raleway-Medium;
     }
     .header2 {
-      margin-top: 3rem;
-      font-size: 1.5rem;
       color: #FFF;
+      font-size: 22px;
+      text-align: center;
+      line-height: 40px;
+      color: $lightGreen;
+      letter-spacing: 2.5px;
+      font-family: Raleway-Light;
+      .label {
+        font-size: 35px;
+        color: $yellow;
+      }
+    }
+  }
+  .buttonContainer {
+    position: absolute;
+    height: 40px;
+    bottom: 50px;
+    right: 70px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    .showCase, .gettingStarted {
+      position: relative;
+      transition: all .5s ease;
+      cursor: pointer;
+      .label {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: WHITE;
+        font-family: Raleway-Medium;
+      }
+    }
+    .gettingStarted .label {
+      color: $yellow;
+    }
+    .showCase:hover, .gettingStarted:hover {
+      opacity: 0.75;
+    }
+    .showCase:active, .gettingStarted:active {
+      opacity: 0.6;
     }
   }
 }
+
 body {
   cursor: pointer;
+  * {
+    font-family: Raleway;
+  }
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url('../assets/fonts/Raleway-Regular.ttf');
+}
+
+@font-face {
+  font-family: Raleway-Bold;
+  src: url('../assets/fonts/Raleway-Bold.ttf');
+}
+
+@font-face {
+  font-family: Raleway-Light;
+  src: url('../assets/fonts/Raleway-Light.ttf');
+}
+
+@font-face {
+  font-family: Raleway-Medium;
+  src: url('../assets/fonts/Raleway-Medium.ttf');
 }
