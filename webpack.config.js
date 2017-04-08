@@ -12,7 +12,7 @@ let devtool;
 let plugins;
 
 const htmlTemplate = new HtmlWebpackPlugin({
-  title: 'SLib-Doc',
+  title: 'SLib',
   template: './client/index.html',
   mobile: true,
   inject: false
