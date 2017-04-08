@@ -35,7 +35,7 @@ Example:
 
 ::
 
-   VariantList v = {"SLib.io is so great!", 100 , 3.141592, "100"};
+   VariantList v = {"SLib is so great!", 100 , 3.141592, "100"};
 
    for (Variant item : v) {
       Console::println("%s", item);
@@ -51,7 +51,7 @@ Example:
 
 ::
 
-   VariantMap v = {{100, "item1"}, {"SLib.io is so great!", "item2"}, {3.141592, "item3"}};
+   VariantMap v = {{100, "item1"}, {"SLib is so great!", "item2"}, {3.141592, "item3"}};
    for (auto item : v) {
       Console::println("%s:%s", item.key, item.value);
    }
@@ -66,7 +66,7 @@ Example:
 
 ::
 
-   VariantMapList v = {{{100, "item1"}, {"SLib.io is so great!", "item2"}, {3.141592, "item3"}}, {{"Washington, D.C.", "item4"}, {"London", "item5"}, {"Madrid", "item6"}}};
+   VariantMapList v = {{{100, "item1"}, {"SLib is so great!", "item2"}, {3.141592, "item3"}}, {{"Washington, D.C.", "item4"}, {"London", "item5"}, {"Madrid", "item6"}}};
    for (auto items : v) {
       for (auto item : items) {
          Console::println("%s:%s", item.key, item.value);

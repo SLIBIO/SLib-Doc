@@ -34,7 +34,7 @@ You can also get the length of a string which can be obtained using getLength() 
 
 ::
 
-   String str = "SLib.io is so great!"
+   String str = "SLib is so great!"
    int length = str.getLength();
 
 Comparing Strings
@@ -44,21 +44,21 @@ You can compare strings using equals() and compare() methods or comparison opera
 
 ::
 
-   String str = "SLib.io is so great!"
+   String str = "SLib is so great!"
 
-   if (!str.equals("SLib.io is so fantastic!")) {
+   if (!str.equals("SLib is so fantastic!")) {
       Console::println("No, They aren't both equal");
    }
 
-   if (str == "SLib.io is so great!") {
+   if (str == "SLib is so great!") {
       Console::println("Yes, They are both equal");
    }
 
-   if (str > "SLib.io is so fantastic!" || str < "SLib.io is so fantastic!") {
+   if (str > "SLib is so fantastic!" || str < "SLib is so fantastic!") {
       Console::println("No, They aren't both equal");
    }
 
-   if (str.compare("SLib.io is so great!") == 0) {
+   if (str.compare("SLib is so great!") == 0) {
       Console::println("Yes, They are both equal");
    }
 
@@ -69,7 +69,7 @@ You can combine strings using Concatenation operator.
 
 ::
 
-   String str1 = "SLib.io"
+   String str1 = "SLib"
    String16 str2 = "はとても素晴らしいです！"
    String str3 = str1 + str2;
    Console::println(str3);
@@ -83,7 +83,7 @@ You can use indexOf() method to find out whether a substring exists.
 
 ::
 
-   String str = "SLib.io is so great!"
+   String str = "SLib is so great!"
    int index = str.indexOf("great");
    if (index < 0) {
       Console::println("Search string was not found");
@@ -98,7 +98,7 @@ You can use a method called split() to achieve this:
 
 ::
 
-   String str = "SLib.io is so great!";
+   String str = "SLib is so great!";
    List<String> words = str.split(" ");
 
    for (String& word: words) {
@@ -109,7 +109,7 @@ You can use :aspect:`auto` specifier instead of List<String>:
 
 ::
 
-   String str = "SLib.io is so great!";
+   String str = "SLib is so great!";
    auto words = str.split(" ");
 
    for (auto& word: words) {
@@ -123,7 +123,7 @@ You can use replaceAll() method.
 
 ::
 
-   String str = "SLib.io is so great!";
+   String str = "SLib is so great!";
    String str1 = str.replaceAll("great", "fantastic");
 
 Changing Case

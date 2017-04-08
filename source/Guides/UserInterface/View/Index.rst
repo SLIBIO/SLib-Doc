@@ -20,8 +20,8 @@ Because view objects are the main way your application interacts with the user, 
 Views can embed other views and create sophisticated visual hierarchies. This creates a parent-child relationship between the view being embedded and the parent view 
 doing the embedding. Normally, a child's visible area is not clipped to the bounds of its superview, but you can use the clipping property to alter that behavior.
 
-In Slib.io, the view can be attached to the native view widgets: Button, Edit, Web … (in iOS, Android, macOS, Win32, Tizen), or can be implemented by its own rendering system (OpenGL, Bitmap, GDI+, Core Graphics, Android Canvas, Cairo …).
-It improves Slib.io’s scalability and the views can also be used for games without any changes. 
+In Slib, the view can be attached to the native view widgets: Button, Edit, Web … (in iOS, Android, macOS, Win32, Tizen), or can be implemented by its own rendering system (OpenGL, Bitmap, GDI+, Core Graphics, Android Canvas, Cairo …).
+It improves Slib’s scalability and the views can also be used for games without any changes. 
 
 Creating a View
 ================

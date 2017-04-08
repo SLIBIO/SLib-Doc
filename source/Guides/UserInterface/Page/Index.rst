@@ -90,7 +90,7 @@ You can create a ViewPage from a layout resource.
    //This application name is myapp.
    Ref<myapp::ui::ExamplePage;> page = new myapp::ui::ExamplePage;
    page->label->setOnClick([](){
-      alert("SLib.io is so great!");
+      alert("SLib is so great!");
    });
 
 You can also create a ViewPage programmatically.
@@ -104,7 +104,7 @@ You can also create a ViewPage programmatically.
    label->setTextColor(Color::Red);
    label->setCenterInParent();
    label->setOnClick([](){
-      alert("SLib.io is so great!");
+      alert("SLib is so great!");
    });
    page->addChild(label);
 

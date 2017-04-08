@@ -66,10 +66,10 @@ On Windows, run the ``setup-path.bat`` batch file using Command Prompt or File E
 To get effect of this setup, please quit all running development tools (Xcode, Android Studio, Tizen Studio, ...) and terminals, and then restart the tools. (on macOS, press Command+Q to completely quit the tools)
 
 
-Integrating SLib.io with existing C++ projects
+Integrating SLib with existing C++ projects
 =====================================================
 
-Using ``SLib.io`` with C++ projects is very easy. You just need to setup include and link directories to your existing C++ project.
+Using ``SLib`` with C++ projects is very easy. You just need to setup include and link directories to your existing C++ project.
 
 ========== ======================== ====================== ================================================================================
 Platform   IDE                      Include Directory      Link Directory
@@ -82,13 +82,13 @@ Win32      Visual Studio            $(SLIB_PATH)/include   $(SLIB_PATH)/lib/Win3
 Linux      KDevelop, CMake          ${SLIB_PATH}/include   ${SLIB_PATH}/lib/Linux/${CMAKE_BUILD_TYPE}-${CMAKE_HOST_SYSTEM_PROCESSOR}
 ========== ======================== ====================== ================================================================================
 
-You can also integrate ``SLib.io`` into any type of C++ projects using similar include and link directory rules.
+You can also integrate ``SLib`` into any type of C++ projects using similar include and link directory rules.
 
 ``Important:`` Your C++ project must be compiled with C++11 support.
 
 After setup directories, link ``slib`` library via IDE or set ``-lslib`` option to the linker.
 
-Your project can also link to the subsets of SLib.io: ``slib-core`` (core+math+crypto) , ``slib-network``, ``slib-graphics``, ``slib-render``, ``slib-ui``, ``slib-media``, ``slib-device``, ``slib-db``, ``slib-web``, ``slib-geo``
+Your project can also link to the subsets of SLib: ``slib-core`` (core+math+crypto) , ``slib-network``, ``slib-graphics``, ``slib-render``, ``slib-ui``, ``slib-media``, ``slib-device``, ``slib-db``, ``slib-web``, ``slib-geo``
 
 To make your project more portable, you can copy the include directory and the precompiled static libraries into your project and use the relative path instead of the environment variable.
 

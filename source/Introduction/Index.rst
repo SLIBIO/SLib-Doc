@@ -43,7 +43,7 @@ mac OS, iOS, Android, and Linux with C++.
 
 .. note:: What is SDev tool?
 
-   SDev tool is a UI editor based on SLib.io.
+   SDev tool is a UI editor based on SLib.
 
    Once you have made the xml layout, you can build this to cpp with SDev.
 
@@ -71,7 +71,7 @@ mac OS, iOS, Android, and Linux with C++.
 
    void MainPage::onOpen()
    {
-      alert("If you like C++ or Objective-C, you will like SLib.io");
+      alert("If you like C++ or Objective-C, you will like SLib");
    }
 
 Automatic Reference Counting in C++
@@ -112,7 +112,7 @@ The most innovative technology is the implementation of Automatic Reference Coun
 Write once and Run Anywhere
 ============================
 
-SLib.io provides all the functionality that can be found in native mobile and desktop development SDKs.
+SLib provides all the functionality that can be found in native mobile and desktop development SDKs.
 
 Users build their apps once and can run it anywhere (Windows/Mac OS/Linux/iOS/Android/Tizen).
 

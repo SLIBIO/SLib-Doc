@@ -262,7 +262,7 @@ The strong references between the Person instance and the Apartment instance rem
 Resolving Strong Reference Cycles Between Class Instances
 =========================================================
 
-SLib.io provides two ways to resolve strong reference cycles when you work with variables of class type: weak references and pointers.
+SLib provides two ways to resolve strong reference cycles when you work with variables of class type: weak references and pointers.
 
 Weak reference and pointer enable one instance in a reference cycle to refer to the other instance without keeping a strong hold on it. 
 The instances can then refer to each other without creating a strong reference cycle.

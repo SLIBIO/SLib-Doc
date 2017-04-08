@@ -1,7 +1,7 @@
 .. include:: Includes.txt
 
 ======================
-Welcome to SLib.io
+Welcome to SLib
 ======================
 
 Write Once, Run Anywhere: Smart Library for Cross-Platform

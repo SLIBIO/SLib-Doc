@@ -28,7 +28,7 @@ legal_extensions = [
     'sphinxcontrib.youtube',
 ]
 
-project = u'SLib.io Documentation'
+project = u'SLib Documentation'
 copyright = u'2017, Hanatech'
 
 
