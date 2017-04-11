@@ -7,6 +7,7 @@ UI Components
 
    Button/Index
    CheckBox/Index
+   RadioButton/Index
    EditView/Index
    ImageView/Index
    LabelView/Index
@@ -14,3 +15,4 @@ UI Components
    SelectView/Index
    PickerView/Index
    ProgressBar/Index
+   ScrollView/Index

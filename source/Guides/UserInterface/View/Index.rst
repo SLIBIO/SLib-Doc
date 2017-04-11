@@ -1,4 +1,6 @@
 
+.. _view:
+
 ======
 View
 ======
@@ -53,6 +55,8 @@ Threading Considerations
 
 Manipulations to your application's user interface can occur on any threads. Thus, you can call the moethods of the View class from code running in any thread of 
 your application.
+
+.. _view-attribute:
 
 XML attributes
 ==================
