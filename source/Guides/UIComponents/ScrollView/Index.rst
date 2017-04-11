@@ -25,7 +25,7 @@ ScrollView contains layouts and enables them to scroll.
    </sapp>
 
 
-To create a PickerView programmatically, you can use code like the following:
+To create a ScrollView programmatically, you can use code like the following:
 
 ::
 
@@ -42,7 +42,7 @@ To create a PickerView programmatically, you can use code like the following:
    scrollView->setContentView(contentView);
    addChild(scrollView);
 
-ScrollView is a sub class of :ref:`view`
+ScrollView is a subclass of :ref:`view`
 
 Scrolling Using Paging Mode
 ============================
@@ -60,7 +60,8 @@ ScrollView supports a paging mode. This mode is used when displaying sequential 
             scrollBars="none"
             paging='true'>
             <linear width="wrap"
-               height="fill">
+               height="fill"
+               orientation='horizontal'>
                <view name="page1"
                    width="wrap"
                    height="fill"

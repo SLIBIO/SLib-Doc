@@ -33,7 +33,7 @@ RadioButtons are mutually exclusive, so you must group them together using the g
    </sapp>
 
 
-To create an ImageView programmatically, you can use code like the following:
+To create an RadioButton programmatically, you can use code like the following:
 
 ::
    
@@ -55,7 +55,7 @@ To create an ImageView programmatically, you can use code like the following:
    addChild(radio2);
    addChild(radio3);
 
-RadioButton is a sub class of :ref:`checkbox` that can be either checked or unchecked.
+RadioButton is a subclass of :ref:`checkbox` that can be either checked or unchecked.
 
 Responding to Click Event
 ==========================

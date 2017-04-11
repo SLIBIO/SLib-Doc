@@ -22,7 +22,7 @@ A checkbox is a specific type of button that permists the user to make a binary 
       </layout>
    </sapp>
 
-RadioButton is a sub class of :ref:`button`.
+RadioButton is a subclass of :ref:`button`.
 
 Responding to Click Event
 ==========================
