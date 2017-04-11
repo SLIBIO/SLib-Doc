@@ -42,7 +42,7 @@ To create a PickerView programmatically, you can use code like the following:
    scrollView->setContentView(contentView);
    addChild(scrollView);
 
-RadioButton is a sub class of :ref:`view`
+ScrollView is a sub class of :ref:`view`
 
 Scrolling Using Paging Mode
 ============================
