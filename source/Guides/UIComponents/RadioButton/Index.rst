@@ -84,3 +84,5 @@ XML Attributes
 **group**
 
 By grouping them together, the app ensures that only one RadioButton can be selected at a time. May be a string.
+
+See more details at CheckBox's :ref:`checkbox-attribute`

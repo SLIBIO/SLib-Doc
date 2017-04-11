@@ -48,9 +48,13 @@ The followings show how you can respond when taps a checkbox which is defined in
 
    chkButton->setOnClick(SLIB_FUNCTION_WEAKREF(MyScreen, onClickButton, this));
 
+.. _checkbox-attribute:
+
 XML Attributes
 ==================
 
 **checked**
 
 If true, sets the state of this button to checked
+
+See more details at Button's :ref:`button-attribute`

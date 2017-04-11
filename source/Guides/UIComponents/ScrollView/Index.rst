@@ -84,4 +84,4 @@ ScrollView supports a paging mode. This mode is used when displaying sequential 
 XML attributes
 ==================
 
-You can check the attributes at View's :ref:`view-attribute`
+See more details at View's :ref:`view-attribute`
