@@ -18,7 +18,7 @@ A view that represents the progress of a task.
    </sapp>
 
 
-To create a PickerView programmatically, you can use code like the following:
+To create a ProgressBar programmatically, you can use code like the following:
 
 ::
 
@@ -28,6 +28,8 @@ To create a PickerView programmatically, you can use code like the following:
    progressBar->setMaximumValue(100);
    progressBar->setValue(20);
    addChild(progressBar);
+
+.. _progress-attribute:
 
 XML attributes
 ==================

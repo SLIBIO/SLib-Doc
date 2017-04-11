@@ -16,3 +16,4 @@ UI Components
    PickerView/Index
    ProgressBar/Index
    ScrollView/Index
+   Slider/Index
