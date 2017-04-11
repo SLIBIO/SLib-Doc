@@ -1,4 +1,6 @@
 
+.. _checkbox:
+
 ======================
 CheckBox
 ======================
@@ -20,38 +22,16 @@ A checkbox is a specific type of button that permists the user to make a binary 
       </layout>
    </sapp>
 
+RadioButton is a sub class of :ref:`button`.
+
 Responding to Click Event
 ==========================
 
-You can respond to click event in three ways.
+You can respond to click event in two ways.
 
 The followings show how you can respond when taps a checkbox which is defined in the above XML.
 
-
-**Setting Listener**
-
-::
-
-   //MyScreen.h
-   #include <slib.h>
-   class MyScreen: public ui::MyPage, public IViewListener
-   {
-      ...
-
-   public:
-      void onTouchEvent(View* v, UIEvent ev);
-
-      ...
-   }
-
-   //MyScreen.cpp
-   #include "MyScreen.h"
-
-   ...
-   chkButton->setEventListener(this);
-   ...
-   
-**Setting Lambda Expression**
+**Setting Callback Using Lambda Expression**
 
 ::
 
@@ -62,7 +42,7 @@ The followings show how you can respond when taps a checkbox which is defined in
       }
    });
 
-**Setting CallBack**
+**Setting CallBack Using Member Function**
 
 ::
 

@@ -57,15 +57,15 @@ Specifies the range of this ProgressBar. May be a float value.
 
 **value**
 
-Specifies the value of the first progress. May be a float value.
+Specifies the value of the primary progress. May be a float value.
 
 **value2**
 
-Specifies the value of the second progress. May be a float value.
+Specifies the value of the secondary progress. May be a float value.
 
 **dual**
 
-If true, the second progress will be shown. May be a boolean value, such as "true" or "false".
+If true, the secondary progress will be shown. May be a boolean value, such as "true" or "false".
 
 **discrete**
 
@@ -77,7 +77,7 @@ Sets the value of the step of the progresses. May be a float value.
 
 **reversed**
 
-If true, sets the range from the maximum value to the minimum value. May be a boolean value, such as "true" or "false".
+If true, switchs the position of the progresses. May be a boolean value, such as "true" or "false".
 
 **track**
 
