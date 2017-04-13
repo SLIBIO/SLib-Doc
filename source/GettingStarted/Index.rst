@@ -97,11 +97,13 @@ Android Studio (using CMake)
 
 Firstly, open and build the project in the ``build/AndroidStudio`` directory in the SLib source. After completion of build, you can see the precompiled static libraries and ``slib.aar`` in the ``lib/Android`` directory.
 
+Secondly, open your Android project created by yourself which will use ``SLib``.
+
 ``Important:`` Use gradle version 2.3.1 or higher.
 
 Edit the ``build.gradle`` in your app module as following.
 
-::
+.. code-block:: gradle
 
   ...
   android {
@@ -157,6 +159,8 @@ Xcode (iOS, macOS)
 
 Firstly, open and build the project in the ``build/iOS-Xcode`` (or ``build/macOS-Xcode`` for macOS) directory in the SLib source. After completion of build, you can see the precompiled static libraries in the ``lib/iOS`` (or ``lib/macOS`` for macOS) directory.
 
+Secondly, open your Xcode project created by yourself which will use ``SLib``.
+
 1. Click on the project icon in the inspector (on the left side)
 
 2. Click on the ``Build Settings`` tab on the right side
@@ -188,6 +192,8 @@ Tizen Studio
 ---------------------------
 
 Firstly, open and build the project in the ``build/TizenStudio`` directory in the SLib source. After completion of build, you can see the precompiled static libraries in the ``lib/Tizen`` directory.
+
+Secondly, open your Tizen project created by yourself which will use ``SLib``.
 
 1. Right click on the project in the ``Project Explorer``
 
@@ -247,6 +253,8 @@ Visual Studio
 
 Firstly, open and build ``SLib.sln`` solution in the ``build/Win32-VC`` directory in SLib source. After completion of build, you can see the precompiled static libraries in the ``lib/Win32`` directory.
 
+Secondly, open your VC project created by yourself which will use ``SLib``.
+
 1. Right click on the project in the ``Solution Explorer``
 
 2. Click on ``Properties`` on the popup menu.
@@ -278,6 +286,8 @@ KDevelop or CMake
 ------------------------
 
 Firstly, open and build ``SLib.kdev4`` project in the ``build/Linux-KDevelop`` directory in SLib source. After completion of build, you can see the precompiled static libraries in the ``lib/Linux`` directory.
+
+Secondly, open your KDevelop project created by yourself which will use ``SLib``.
 
 Edit ``CMakeLists.txt`` as following
     
