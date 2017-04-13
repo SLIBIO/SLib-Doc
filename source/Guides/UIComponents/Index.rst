@@ -19,3 +19,4 @@ UI Components
    Slider/Index
    ViewPager/Index
    TabView/Index
+   VideoView/Index
