@@ -15,7 +15,7 @@ apply to another XML resource with attributes such as drawable.
 
 With an image saved at res/image/myimage.png, this layout XML applies the image to a View:
 
-::
+.. code-block:: xml
 
    <image
       width="wrap"
@@ -26,7 +26,7 @@ With an image saved at res/image/myimage.png, this layout XML applies the image 
 
 The following application code retrieves the image as a Drawable:
 
-::
+.. code-block:: cpp
 
    Ref<Drawable> drawable = drawable::myimage::get()
 
@@ -37,7 +37,7 @@ A layout resource defines the architecture for the UI in a page or a component o
 
 **SYNTAX:**
 
-::
+.. code-block:: xml
 
    <sapp version="1">
       <layout type=["view | page | window"]
@@ -132,7 +132,7 @@ name           Resource name.
 
 **EXAMPLE:**
 
-::
+.. code-block:: xml
 
    <sapp version="1">
       <layout type="page"
@@ -161,7 +161,7 @@ name           Resource name.
 
 This application name is myapp and you can load the above layout like so:
 
-::
+.. code-block:: cpp
 
    #include "../res/resources.h"
    
@@ -181,7 +181,7 @@ A style resource defines the format and look for a UI. A style can be applied to
 
 **SYNTAX:**
 
-::
+.. code-block:: xml
 
    <layout-style
       name='style_name'
@@ -206,7 +206,7 @@ name         Style name.
 
 XML file for the style:
 
-::
+.. code-block:: xml
 
    <sapp version='1'>'
       <layout-style
@@ -221,7 +221,7 @@ XML file for the style:
 
 XML file that applies the sylte to a Label:
 
-::
+.. code-block:: xml
 
    <label
       styles="style_label"
@@ -234,7 +234,7 @@ A string resource provides text strings for your application.
 
 **SYNTAX:**
 
-::
+.. code-block:: xml
 
     <strings>
        <string name='string_name'>text_string</string>
@@ -269,7 +269,7 @@ locale         Defines the language for this string.
 
 **EXAMPLE:**
 
-::
+.. code-block:: xml
 
    <strings>
       <string name='hello'>Hello!</string>
@@ -277,7 +277,7 @@ locale         Defines the language for this string.
 
 This layout XML applies a string to a View:
 
-::
+.. code-block:: xml
 
    <label
       width="wrap"
@@ -287,13 +287,13 @@ This layout XML applies a string to a View:
 If you need to format your strings using String::format(String& szFormat) then you can do so by 
 putting your format arguments in the string resource.
 
-::
+.. code-block:: xml
 
    <string name="welcome_messages">Hello, %s! You have %d new messages.</string>
 
 You can format the string with arguments from your application like this:
 
-::
+.. code-block:: cpp
 
    //This application name is myapp.
    String text = String::format(mayapp::string::welcome_messages::get(), userName, mailCount);
@@ -321,7 +321,7 @@ wrap           The view should be only big enough to enclose its content.
 
 **Example**
 
-::
+.. code-block:: xml
 
    <sapp version='1'>
       <layout type='page'
