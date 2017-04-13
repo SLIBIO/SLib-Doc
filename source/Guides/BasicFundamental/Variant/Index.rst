@@ -16,7 +16,7 @@ Example:
 
 The follwing code shows the use of Variant objects.
 
-::
+.. code-block:: cpp
 
    Variant v1 = 100;
    Variant v2 = 3.141592;
@@ -33,7 +33,7 @@ It is same as List<Variant>.
 Example:
 ---------
 
-::
+.. code-block:: cpp
 
    VariantList v = {"SLib is so great!", 100 , 3.141592, "100"};
 
@@ -49,7 +49,7 @@ It is same as Map<String, Variant>.
 Example:
 ---------
 
-::
+.. code-block:: cpp
 
    VariantMap v = {{100, "item1"}, {"SLib is so great!", "item2"}, {3.141592, "item3"}};
    for (auto item : v) {
@@ -64,7 +64,7 @@ It is same as List < Map<String, Variant> >.
 Example:
 ---------
 
-::
+.. code-block:: cpp
 
    VariantMapList v = {{{100, "item1"}, {"SLib is so great!", "item2"}, {3.141592, "item3"}}, {{"Washington, D.C.", "item4"}, {"London", "item5"}, {"Madrid", "item6"}}};
    for (auto items : v) {
