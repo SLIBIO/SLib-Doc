@@ -17,7 +17,7 @@ List
 
 List<T>, internally, contains only Ref<CList<T>> member variable, so it can be used as reference variables in any scope, and also used as function argument and return type.
 
-::
+.. code-block:: cpp
 
    List<int> getList()
    {
@@ -33,7 +33,7 @@ Creating Arrays
 You can define an array object using an array of objects of type const T. Another way to create arrays is using createFromElements() method. 
 Both the approaches are shown below:
 
-::
+.. code-block:: cpp
 
    List<String> colors = {"Red", "Green", "Blue", "Yellow", "Orange"};
    List<String> cities = List<String>::createFromElements("New York", "Los Angeles", "Chicago", "Houston", "Philadelphia");
@@ -43,7 +43,7 @@ Enumerating Arrays
 
 Enumerating over an array is possible using any of the following two ways:
 
-::
+.. code-block:: cpp
 
    List<String> cities = {"New York", "Los Angeles", "Chicago", "Houston", "Philadelphia"};
 
@@ -60,7 +60,7 @@ Combining Arrays
 
 Arrays can be combined via addAll().
 
-::
+.. code-block:: cpp
 
    List<String> cities = List<String>::createFromElements("New York", "Los Angeles", "Chicago", "Houston", "Philadelphia");
    List<String> moreCities = List<String>::createFromElements("Phoenix", "San Antonio", "San Diego", "Dallas", "San Jose");
@@ -73,7 +73,7 @@ Membership Checking
 The contains() method returns true if the object is in the array, false otherwise. The indexOf() returns the index of the first occurrence of the 
 requested object or -1 if it is not in the array.
 
-::
+.. code-block:: cpp
 
    List<String> cities = List<String>::createFromElements("New York", "Los Angeles", "Chicago", "Houston", "Philadelphia");
 
@@ -92,7 +92,7 @@ Sorting Arrays
 
 You can sort an array with the sort() method.
 
-::
+.. code-block:: cpp
 
    List<String> cities = List<String>::createFromElements("New York", "Los Angeles", "Chicago", "Houston", "Philadelphia");
    
@@ -113,7 +113,7 @@ Thread Safe
 
 Most of CList and List methods are implemented in thread-safe model but if you don't need locking on this List<T> object, you can use lock-free operations (ending with _NoLock) for the performance optimization.
 
-::
+.. code-block:: cpp
 
    List<int> getList()
    {
