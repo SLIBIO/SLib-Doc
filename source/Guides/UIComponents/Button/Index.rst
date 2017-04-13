@@ -7,7 +7,7 @@ Button
 
 Button is a view that executes your custom code in response to user interactions.
 
-::
+.. code:: xml
 
    <sapp version="1.0">
       <layout type="page"
@@ -35,7 +35,7 @@ The followings show how you can respond when taps a button which is defined in t
 
 **Setting Listener**
 
-::
+.. code:: cpp
 
    //MyScreen.h
    #include <slib.h>
@@ -58,7 +58,7 @@ The followings show how you can respond when taps a button which is defined in t
    
 **Setting Lambda Expression**
 
-::
+.. code:: cpp
 
    iconButton->setOnClick([](View*){
       UI::alert("Hello World!");
@@ -66,7 +66,7 @@ The followings show how you can respond when taps a button which is defined in t
 
 **Setting CallBack**
 
-::
+.. code:: cpp
 
    iconButton->setOnClick(SLIB_FUNCTION_WEAKREF(MyScreen, onClickButton, this));
 
