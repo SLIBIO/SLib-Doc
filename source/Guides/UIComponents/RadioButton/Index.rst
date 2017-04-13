@@ -6,7 +6,7 @@ RadioButton
 A RadioButton is a two-states button that can be either checked or unchecked. RadioButtons allow the user to select one options from a set. 
 RadioButtons are mutually exclusive, so you must group them together using the group attribute. By grouping them together, the app ensures that only one RadioButton can be selected at a time.
 
-::
+.. code:: xml
 
    <sapp version="1.0">
       <layout type="page"
@@ -35,7 +35,7 @@ RadioButtons are mutually exclusive, so you must group them together using the g
 
 To create an RadioButton programmatically, you can use code like the following:
 
-::
+.. code:: cpp
    
    Ref<RadioGroup> group = new RadioGroup;
    Ref<RadioButton> radio1 = new RadioButton;
@@ -66,7 +66,7 @@ The followings show how you can respond when taps a checkbox which is defined in
 
 **Setting Callback Using Lambda Expression**
 
-::
+.. code:: cpp
 
    radioButton->setOnClick([](View*){
       
@@ -74,7 +74,7 @@ The followings show how you can respond when taps a checkbox which is defined in
 
 **Setting CallBack Using Member Function**
 
-::
+.. code:: cpp
 
    radioButton->setOnClick(SLIB_FUNCTION_WEAKREF(MyScreen, onClickRadioButton, this));
 
