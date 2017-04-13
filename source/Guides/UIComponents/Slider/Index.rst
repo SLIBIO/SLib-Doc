@@ -25,7 +25,7 @@ A control used to select a single value or selecting a range of values from a co
       </layout>
    </sapp>
 
-Selecting Rrange
+Selecting Range
 =================
 
 Slider supports select range mode. You can specify the dual attribute.
@@ -51,6 +51,30 @@ Slider supports select range mode. You can specify the dual attribute.
             dual="true"/>
       </layout>
    </sapp>
+
+Responding to to User Interactions
+===================================
+
+You can respond on changing the value in two ways.
+   
+**Setting Callback using Lambda Expression**
+
+::
+
+   slider->setOnChange([](Slider* slider, float value){
+
+   });
+
+   slider->setOnChangeSecondary([](Slider* slider, float value){
+
+   });
+
+**Setting CallBack using member function**
+
+::
+
+   slider->setOnChange(SLIB_FUNCTION_WEAKREF(MyScreen, onChangeValue, this));
+   slider->setOnChangeSecondary(SLIB_FUNCTION_WEAKREF(MyScreen, onChangeSecondaryValue, this));
 
 XML attributes
 ==================

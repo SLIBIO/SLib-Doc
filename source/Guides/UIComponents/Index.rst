@@ -17,3 +17,5 @@ UI Components
    ProgressBar/Index
    ScrollView/Index
    Slider/Index
+   ViewPager/Index
+   TabView/Index
