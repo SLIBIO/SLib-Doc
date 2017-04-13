@@ -5,7 +5,7 @@ LabelView
 
 A view that displays read-only text.
 
-::
+.. code:: xml
 
    <sapp version="1.0">
       <layout type="page"
@@ -25,7 +25,7 @@ A view that displays read-only text.
 
 To create a Label programmatically, you can use code like the following:
 
-::
+.. code:: cpp
 
    Ref<LabelView> label = new LabelView;
    label->setFontAttributes(12);
