@@ -5,7 +5,7 @@ EditView
 
 A EditView is a control that displays editable text.
 
-::
+.. code:: xml
 
    <sapp version="1.0">
       <layout type="page"
@@ -27,7 +27,7 @@ You can respond to key event in three ways.
 
 **Setting Listener**
 
-::
+.. code:: cpp
 
    //MyScreen.h
    #include <slib.h>
@@ -50,7 +50,7 @@ You can respond to key event in three ways.
    
 **Setting Lambda Expression**
 
-::
+.. code:: cpp
 
    myEdit->setOnKeyEvent([](View*, UIEvent* ev){
       UI::alert(String::format("You pressed: %d", ev->getKeycode()));
@@ -58,7 +58,7 @@ You can respond to key event in three ways.
 
 **Setting CallBack**
 
-::
+.. code:: cpp
 
    myEdit->setOnClick(SLIB_FUNCTION_WEAKREF(MyScreen, onKeyPressEvent, this));
 

@@ -15,7 +15,7 @@ a singletone MobileApp object.
 
 Here is an example of how you can create an app.
 
-::
+.. code-block:: cpp
    
    //ExampleApp.h
    #include <slib.h>
@@ -36,7 +36,7 @@ Here is an example of how you can create an app.
       void onPause();
    };
 
-::
+.. code-block:: cpp
 
    //ExampleApp.cpp
    #include "ExampleApp.h"
@@ -49,7 +49,7 @@ Here is an example of how you can create an app.
       setStartupPage(MainPage::getInstance());
    }
 
-::
+.. code-block:: cpp
 
    //main.cpp (Android)
    #include <jni.h>
@@ -63,7 +63,7 @@ Here is an example of how you can create an app.
       return JNI_VERSION_1_4;
    }
 
-::
+.. code-block:: cpp
 
    //main.mm (iOS)
    #include <ExampleApp.h>
@@ -85,7 +85,7 @@ All UI components are rendered from OpenGL ES
 
 Here is an example of how you can create a mobile game.
 
-::
+.. code-block:: cpp
    
    //ExampleGame.h
    #include <slib.h>
@@ -106,7 +106,7 @@ Here is an example of how you can create a mobile game.
       void onPause();
    };
 
-::
+.. code-block:: cpp
 
    //ExampleGame.cpp
    #include "ExampleGame.h"
@@ -119,7 +119,7 @@ Here is an example of how you can create a mobile game.
       setStartupPage(MainPage::getInstance());
    }
 
-::
+.. code-block:: cpp
 
    //main.cpp (Android)
    #include <jni.h>
@@ -133,7 +133,7 @@ Here is an example of how you can create a mobile game.
       return JNI_VERSION_1_4;
    }
 
-::
+.. code-block:: cpp
 
    //main.mm (iOS)
    #include <ExampleGame.h>
@@ -151,7 +151,7 @@ Every desktop app has exactly one instance of UIApp. When an app is launched,
 the UIApp::main() function is called; among its other tasks, this function creates 
 a singletone UIApp object.
 
-::
+.. code-block:: cpp
    
    //ExampleDesktopApp.h
    #include <slib.h>
@@ -171,7 +171,7 @@ a singletone UIApp object.
 
    };
 
-::
+.. code-block:: cpp
    
    //ExampleDesktopApp.cpp
    #include "ExampleDesktopApp.h"
@@ -191,7 +191,7 @@ a singletone UIApp object.
       setMenu(menu::MainMenu::get()->root);
    }
 
-::
+.. code-block:: cpp
 
    //main.mm (mac OS)
    #include <ExampleDesktopApp.h>
@@ -202,7 +202,7 @@ a singletone UIApp object.
       return 0;
    }
 
-::
+.. code-block:: cpp
 
    //main.cpp (Win32)
    #include <ExampleDesktopApp.h>
@@ -219,7 +219,7 @@ WebService Application
 Every web service app has exactly one instance of WebService. When an app is launched, the WebService::main() function 
 is called; among its other tasks, this function creates a singletone WebService object.
 
-::
+.. code-block:: cpp
 
    //MyServiceApp.h
    #include <slib.h>
@@ -254,7 +254,7 @@ is called; among its other tasks, this function creates a singletone WebService 
       void onStopService();
    };
 
-::
+.. code-block:: cpp
 
    //MyWebServiceApp.cpp
    #include "MyWebServiceApp.h"
@@ -300,7 +300,7 @@ is called; among its other tasks, this function creates a singletone WebService 
    {
    }
 
-::
+.. code-block:: cpp
 
    //main.mm (mac OS)
    #include <MyWebServiceApp.h>
@@ -311,7 +311,7 @@ is called; among its other tasks, this function creates a singletone WebService 
       return 0;
    }
 
-::
+.. code-block:: cpp
 
    //main.cpp (Win32)
    #include <MyWebServiceApp.h>
