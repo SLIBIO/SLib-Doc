@@ -7,7 +7,7 @@ CheckBox
 
 A checkbox is a specific type of button that permists the user to make a binary choice. A example usage of a checkbox inside your app would be the following:
 
-::
+.. code:: xml
 
    <sapp version="1.0">
       <layout type="page"
@@ -33,7 +33,7 @@ The followings show how you can respond when taps a checkbox which is defined in
 
 **Setting Callback Using Lambda Expression**
 
-::
+.. code:: cpp
 
    chkButton->setOnClick([](View*){
       CheckBox* checkbox = (CheckBox*) v;
@@ -44,7 +44,7 @@ The followings show how you can respond when taps a checkbox which is defined in
 
 **Setting CallBack Using Member Function**
 
-::
+.. code:: cpp
 
    chkButton->setOnClick(SLIB_FUNCTION_WEAKREF(MyScreen, onClickButton, this));
 
