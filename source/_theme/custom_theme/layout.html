@@ -4,6 +4,7 @@
 {%- block htmltitle %}
   {% set script_files = script_files + ["_static/myscript.js"] %}
   <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="{{ pathto('_static/fonts/open-sans/stylesheet.css', 1) }}" />
   <!-- Licensed under the SIL Open Font License -->
   <link rel="stylesheet" type="text/css" href="{{ pathto('_static/fonts/source-serif-pro/source-serif-pro.css', 1) }}" />
@@ -105,15 +106,27 @@
       </div>
       <div class="navMenu">
         <ul>
-          <li class="highLighted"><a href="./Index.html">DOCUMENT</a></li>
-          <li><a href="../about">FAQ</a></li>
-          <li><a href="../showcase">About US</a></li>
-          <li><a href="../contact">REGISTER</a></li>
+          <li>
+            <a href="./Index.html">DOCUMENT</a>
+          </li>
+          <li>
+            <a href="about">BLOG</a>
+          </li>
+          <li>
+            <a href="/showcase">SHOWCASE</a>
+          </li>
+          <li>
+            <a href="contact">CONTACT</a>
+          </li>
+          <li style="float: right;">
+            <a class="gotoGit" href="contact">
+              Go To
+              <span class="fa-stack"><i class="fa fa-github fa-stack-1x fa-inverse"></i></span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
-    <div class="contactBorder"></div>
-    <div class="contactLabel">CONTACT</div>
     <div class="container-wrapper">
       {%- block sidebar1 %}{{ guzzle_sidebar() }}{% endblock %}
 

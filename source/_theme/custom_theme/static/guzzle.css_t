@@ -25,33 +25,10 @@ body {
   float: right;
   margin-right: 35px;
 }
-.contactBorder {
-  right: 0px;
-  width: 140px;
-  border-top: 50px solid #fcb64e;
-  border-left: 30px solid #353534;
-  position: fixed;
-  z-index: 10000;
-  transition: all .5s ease;
-}
-.contactLabel {
-  right: 0px;
-  padding-left: 30px;
-  text-align: center;
-  color: WHITE;
-  font-size: 12px;
-  font-family: "Raleway";
-  width: 140px;
-  position: fixed;
-  z-index: 10000;
-  letter-spacing: 1.5px;
-  line-height: 50px;
-  border-bottom: 2px solid #fcb64e;
-}
 .navigationLogo {
-  flex: 1;
   font-size: 30px;
-  margin-left: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
   display: flex;
   align-items: center;
 }
@@ -63,14 +40,15 @@ body {
   flex-direction: row;
   position: fixed;
   left: 0px;
-  right: 140px;
+  right: 0;
   z-index: 10000;
-  line-height: 50px;
+  line-height: 65px;
   background-color: #353534;
-  border-bottom: 2px solid #fcb64e;
+  border-bottom: 1px solid #00a79d;
   transition: all .5s ease;
 }
 .navMenu {
+  flex: 1;
   margin-right: 40px;
   font-size: 1.25em;
   display: flex;
@@ -78,6 +56,7 @@ body {
   justify-content: center;
 }
 .navMenu ul {
+  flex: 1;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -95,7 +74,7 @@ body {
 }
 .navMenu li a {
   display: block;
-  color: #fcb64e;
+  color: #00a79d;
   text-align: center;
   padding: 0 7.5px;
   font-family: "Raleway-Medium";
@@ -106,6 +85,15 @@ body {
 }
 .navMenu li a:hover {
   color: #eeeee6;
+}
+.gotoGit {
+  flex: 1;
+  color: #fcb64e !important;
+  font-size: 18px;
+}
+.gotoGit i {
+  color: #fcb64e;
+  font-size: 28px;
 }
 #left-column {
   float: left;
@@ -118,7 +106,7 @@ body {
 }
 
 #right-column {
-  padding: 50px 0;
+  padding: 65px 0;
   margin-left: 300px;
   background-color: #fff;
 }
@@ -1046,7 +1034,7 @@ span.eqno {
   #right-column {
     margin-left: 0;
     margin-top: 0;
-    padding: 50px 20px 8px 20px;
+    padding: 65px 20px 8px 20px;
     width: 100%;
     float: none;
   }

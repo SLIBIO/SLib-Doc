@@ -29,7 +29,6 @@ export class Footer extends Component {
           </div>
         </div>
         <div className={styles.bar} />
-        <div className={styles.background} />
       </div>
     );
   }

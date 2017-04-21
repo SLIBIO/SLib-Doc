@@ -66,7 +66,7 @@ module.exports = {
     vendor: ['react', 'react-dom', 'react-mdl', 'react-router']
   },
   output: {
-    path: path.join(__dirname, 'build'),
+    path: path.join(__dirname, 'build_client'),
     publicPath: '/',
     filename: '[name].js'
   },

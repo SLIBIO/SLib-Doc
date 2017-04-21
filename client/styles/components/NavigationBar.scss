@@ -5,33 +5,10 @@ $offWhite: #eeeee6;
 $darkGray: #353534;
 
 $contactWidth: 110px;
-.contactBorder {
-  right: 0px;
-  width: $contactWidth;
-  border-top: 50px solid $yellow;
-  border-left: 30px solid transparent;
-  position: fixed;
-  z-index: 10000;
-  transition: all .5s ease;
-}
-.contactLabel {
-  right: 0px;
-  padding-left: 40px;
-  text-align: center;
-  color: WHITE;
-  font-size: 12px;
-  width: $contactWidth;
-  position: fixed;
-  z-index: 10000;
-  letter-spacing: 1.5px;
-  line-height: 50px;
-  border-bottom: 2px solid $yellow;
-}
-
 .navigationLogo {
-  flex: 1;
   font-size: 30px;
-  margin-left: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
   .imgLogo {
     width: 40px;
   }
@@ -41,11 +18,11 @@ $contactWidth: 110px;
   flex-direction: row;
   position: fixed;
   left: 0px;
-  right: $contactWidth;
+  right: 0;
   z-index: 10000;
-  line-height: 50px;
+  line-height: 65px;
   background-color: $darkGray;
-  border-bottom: 2px solid $yellow;
+  border-bottom: 1px solid $lightGreen;
   transition: all .5s ease;
 }
 .nav_pinch {
@@ -54,12 +31,14 @@ $contactWidth: 110px;
   opacity: .65;
 }
 .navMenu {
+  flex: 1;
   margin-right: 40px;
   font-size: 1.25em;
   display: flex;
   align-items: center;
   justify-content: center;
   ul {
+    flex: 1;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -74,10 +53,10 @@ $contactWidth: 110px;
     margin-right: 20px;
     a {
       display: block;
-      color: $yellow;
+      color: $lightGreen;
       text-align: center;
       padding: 0 7.5px;
-      font-family: "Raleway-Medium";
+      font-family: "Raleway";
       letter-spacing: 1.5px;
       text-decoration: none;
       transition: all .5s ease
@@ -88,6 +67,15 @@ $contactWidth: 110px;
   }
 }
 
+.gotoGit {
+  flex: 1;
+  color: $yellow !important;
+  font-size: 18px;
+  i {
+    color: $yellow;
+    font-size: 28px;
+  }
+}
 .mobileNav {
   z-index: 1000;
   ul {

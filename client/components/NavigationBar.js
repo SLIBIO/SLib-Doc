@@ -30,9 +30,12 @@ export default class NavContainer extends Component {
     return [
       <ul onClick={this.handleNavClick.bind(this)} key={100}>
         <li key={202}><a href='./doc/Index.html'>DOCUMENT</a></li>
-        <li key={200}><Link to='about'>FAQ</Link></li>
-        <li key={203}><Link to='/showcase'>About US</Link></li>
-        <li key={205}><Link to='contact'>REGISTER</Link></li>
+        <li key={200}><Link to='about'>BLOG</Link></li>
+        <li key={203}><Link to='/showcase'>SHOWCASE</Link></li>
+        <li key={205}><Link to='contact'>CONTACT</Link></li>
+        <li key={206} style={{ float: 'right' }}><Link to='contact' className={styles.gotoGit}>
+          Go To <span className='fa-stack'><i className='fa fa-github fa-stack-1x fa-inverse' /></span>
+        </Link></li>
       </ul>
     ];
   }
@@ -103,10 +106,6 @@ export default class NavContainer extends Component {
             <img role='presentation' src={`${SlibIcon}`} className={styles.imgLogo} />
           </div>
           {this.renderNavigation()}
-        </div>
-        <div className={styles.contactBorder} />
-        <div className={styles.contactLabel}>
-          CONTACT
         </div>
       </div>
     );

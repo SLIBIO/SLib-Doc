@@ -5,7 +5,7 @@ $offWhite: #eeeee6;
 
 .container {
   position: relative;
-  height: 200px;
+  height: 250px;
   z-index: 1000;
   background-color: $offWhite;
   display: flex;
@@ -14,16 +14,6 @@ $offWhite: #eeeee6;
   .bar {
     height: 30px;
     background-color: $lightGreen;
-  }
-  .background {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 200px;
-    width: 512px;
-    background-image: url('../../assets/footer_background.png');
-    background-repeat: no-repeat;
-    background-size: contain;
   }
   .leftContainer {
     margin-left: 30px;
