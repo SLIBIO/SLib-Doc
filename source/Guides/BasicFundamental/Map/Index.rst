@@ -39,7 +39,7 @@ Adding & Removing Elements
 
 You can add and remove elements using put() and remove() methods.
 
-::
+.. code-block:: cpp
 
    Map<String, String> capitals;
    capitals.put("China", "Beijing");
@@ -53,7 +53,7 @@ Reading from a Map
 
 You can use [] operator to access the value for a key. The getValue() method is the other common way to access values.
 
-::
+.. code-block:: cpp
 
    Map<String, String> capitals;
    capitals.put("China", "Beijing");
@@ -69,7 +69,7 @@ Enumerating Maps
 
 Range-based for loop is the most efficient way to enumerate a Map.
 
-::
+.. code-block:: cpp
 
    Map<String, String> capitals;
    capitals.put("China", "Beijing");
@@ -83,7 +83,7 @@ Range-based for loop is the most efficient way to enumerate a Map.
 
 You can isolate a Map's keys/values with the getAllKeys()/getAllValues() methods.
 
-::
+.. code-block:: cpp
 
    List<String> keys = capitals.getAllKeys();
    List<String> values = capitals.getAllValues();
@@ -93,7 +93,7 @@ Combining Maps
 
 Map object can be expanded by adding the conents of another Map to its collection via the putAll() methods.
 
-::
+.. code-block:: cpp
 
    Map<String, String> capitals;
    capitals.put("China", "Beijing");

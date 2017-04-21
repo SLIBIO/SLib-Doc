@@ -22,7 +22,7 @@ Creating and Formatting the String
 
 The most common and the one you are likely to be using is String::format()
 
-::
+.. code-block:: cpp
 
    String name = "Johne"
    String message = String::format("Hello, %s!, You have %d new messages.", name, 20);
@@ -32,7 +32,7 @@ String formatting is smiliar with Java Formatter. Take a look at the Java docume
 
 You can also get the length of a string which can be obtained using getLength() method:
 
-::
+.. code-block:: cpp
 
    String str = "SLib is so great!"
    int length = str.getLength();
@@ -42,7 +42,7 @@ Comparing Strings
 
 You can compare strings using equals() and compare() methods or comparison operators.
 
-::
+.. code-block:: cpp
 
    String str = "SLib is so great!"
 
@@ -67,7 +67,7 @@ Combining Strings
 
 You can combine strings using Concatenation operator.
 
-::
+.. code-block:: cpp
 
    String str1 = "SLib"
    String16 str2 = "はとても素晴らしいです！"
@@ -81,7 +81,7 @@ Searching Strings
 
 You can use indexOf() method to find out whether a substring exists.
 
-::
+.. code-block:: cpp
 
    String str = "SLib is so great!"
    int index = str.indexOf("great");
@@ -96,7 +96,7 @@ Splitting Strings into an Array
 
 You can use a method called split() to achieve this:
 
-::
+.. code-block:: cpp
 
    String str = "SLib is so great!";
    List<String> words = str.split(" ");
@@ -107,7 +107,7 @@ You can use a method called split() to achieve this:
 
 You can use :aspect:`auto` specifier instead of List<String>:
 
-::
+.. code-block:: cpp
 
    String str = "SLib is so great!";
    auto words = str.split(" ");
@@ -121,7 +121,7 @@ Replacing Substrings
 
 You can use replaceAll() method.
 
-::
+.. code-block:: cpp
 
    String str = "SLib is so great!";
    String str1 = str.replaceAll("great", "fantastic");
@@ -131,7 +131,7 @@ Changing Case
 
 String classes provide a few convenient methods for changing the case of a string. This can be used to normalize user submitted values.
 
-::
+.. code-block:: cpp
 
    String str1= "hElLo wOrLD"
    Console::println("%s, %s", str1.toUpper(), str1.toLower());
@@ -142,7 +142,7 @@ Numerical Conversions
 
 String classes define several conversion methods for interpreting strings as primitive values.
 
-::
+.. code-block:: cpp
 
    String age = "25"
    int value1 = str1.parseInt();

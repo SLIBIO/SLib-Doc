@@ -16,3 +16,8 @@ UI Components
    PickerView/Index
    ProgressBar/Index
    ScrollView/Index
+   Slider/Index
+   ViewPager/Index
+   TabView/Index
+   VideoView/Index
+   WebView/Index

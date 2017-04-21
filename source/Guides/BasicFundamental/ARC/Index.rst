@@ -92,7 +92,7 @@ There are now three strong references to this single Person instance.
 If you break two of these strong references by assigning nullptr to two of the variables, 
 a single strong reference remains, and the Person instance is not deallocated:
 
-::
+.. code-block:: cpp
 
    reference1 = nullptr;
    reference2 = nullptr;

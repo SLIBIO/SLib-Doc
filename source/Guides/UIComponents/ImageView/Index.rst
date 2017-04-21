@@ -5,7 +5,7 @@ ImageView
 
 A view that displays a single image in your interface. ImageView let you draw any image that can be specified using a Image object.
 
-::
+.. code:: xml
 
    <sapp version="1.0">
       <layout type="page"
@@ -22,7 +22,7 @@ A view that displays a single image in your interface. ImageView let you draw an
 
 To create an ImageView programmatically, you can use code like the following:
 
-::
+.. code:: cpp
 
    Ref<ImageView> imageView = new ImageView;
    imageView->setSource(drawable::character1::get());
@@ -36,13 +36,13 @@ Loading Images
 
 To load image from somewhere on your drawable use:
 
-::
+.. code:: cpp
 
   imageView->setSource(drawable::character1::get());
 
 To load image from file on your drive use:
 
-::
+.. code:: cpp
 
    Ref<Image> image = Image::loadFromfile(filePath);
    imageView->setSource(image);
